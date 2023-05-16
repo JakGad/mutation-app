@@ -1,0 +1,41 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+exporters:
+  prometheusremotewrite:
+    endpoint: 'http://prometheus:9090/api/v1/write'
+    tls:
+      insecure: true
+#  otlp:
+#    endpoint: tempo:4317
+#    tls:
+#      insecure: true
+  loki:
+    endpoint: http://loki:3100/loki/api/v1/push
+    format: json
+    labels:
+      resource:
+        service.name: "service_name"
+        service.instance.id: "service_instance_id"
+  logging:
+    verbosity: detailed
+    sampling_initial: 5
+    sampling_thereafter: 200
+
+service:
+  telemetry:
+    logs:
+      level: "debug"
+  pipelines:
+    metrics:
+      receivers: [ otlp ]
+      exporters: [ prometheusremotewrite ]
+#    traces:
+#      receivers: [ otlp ]
+#      exporters: [ otlp, logging ]
+    logs:
+      receivers: [ otlp ]
+      exporters: [ loki ]

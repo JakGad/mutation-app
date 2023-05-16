@@ -1,0 +1,71 @@
+version: "3.8"
+
+networks:
+  grafana-bridge:
+  oltp-bridge:
+
+services:
+  rabbitmq3:
+    container_name: "rabbitmq"
+    image: rabbitmq:3.11.13-management-alpine
+    environment:
+      - RABBITMQ_DEFAULT_USER=myuser
+      - RABBITMQ_DEFAULT_PASS=mypassword
+    ports:
+      # AMQP protocol port
+      - '5672:5672'
+      # HTTP management UI
+      - '15672:15672'
+        
+  grafana:
+    image: grafana/grafana:8.2.6
+    container_name: "grafana"
+    volumes:
+      - ./data/grafana-data/datasources:/etc/grafana/provisioning/datasources
+      - ./data/grafana-data/dashboards-provisioning:/etc/grafana/provisioning/dashboards
+      - ./data/grafana-data/dashboards:/var/lib/grafana/dashboards
+    ports:
+      - "3000:3000"
+    networks: 
+      - grafana-bridge
+  
+  prometheus:
+    image: prom/prometheus:v2.43.0
+    container_name: "prometheus"
+    volumes:
+      - ./prometheus/:/etc/prometheus
+    command: [ "--web.enable-remote-write-receiver", "--config.file=/etc/prometheus/prometheus.yml" ]
+    networks: 
+      - grafana-bridge
+      - oltp-bridge
+  
+  loki:
+    image: grafana/loki:2.8.0
+    container_name: "loki"
+    ports:
+      - "3100:3100"
+    command: [ "-config.file=/etc/loki/local-config.yaml" ]
+    networks:
+      - grafana-bridge
+      - oltp-bridge
+  
+#  tempo:
+#    image: grafana/tempo:main-9996433-amd64
+#    container_name: "tempo"
+#    command: [ "-config.file=/etc/tempo.yaml" ]
+#    volumes:
+#      - ./tempo/tempo.yaml:/etc/tempo.yaml
+#    networks:
+#      - grafana-bridge
+#      - oltp-bridge
+       
+  collector:
+    image: otel/opentelemetry-collector-contrib:0.75.0
+    container_name: "collector"
+    command: [ "--config=/etc/collector.yaml" ]
+    volumes:
+      - ./collector:/etc
+    ports: 
+      - "4317:4317"
+    networks:
+      - oltp-bridge

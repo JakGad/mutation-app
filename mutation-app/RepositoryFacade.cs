@@ -1,5 +1,8 @@
 using System.Runtime.InteropServices;
+using System.Text.Json;
 using LibGit2Sharp;
+using Microsoft.Extensions.Logging;
+using mutation_app.Monitoring;
 using Utils.logger;
 
 namespace mutation_app;
@@ -13,7 +16,8 @@ public class RepositoryFacade
 
     private Repository _repository;
     private string url;
-
+    
+    [MethodStats]
     private static void CreateDirectoryIfDoesntExist()
     {
         try
@@ -23,10 +27,11 @@ public class RepositoryFacade
         }
         catch (Exception e)
         {
-            _logger.Error("cannot create workdir", "RepositoryFacade.CreateDirectoryIfDoesntExist", e);
+            _logger.LogCritical(e, "cannot create workdir");
         }
     }
-
+    
+    [MethodStats]
     private static void CleanWorkdir()
     {
         try
@@ -36,10 +41,10 @@ public class RepositoryFacade
         }
         catch (Exception e)
         {
-            _logger.Error("cannot clear workdir", "RepositoryFacade.CleanWorkdir", e);
+            _logger.LogError(e, "cannot clear workdir");
         }
     }
-
+    
     public RepositoryFacade(string url)
     {
         CreateDirectoryIfDoesntExist();
@@ -48,26 +53,27 @@ public class RepositoryFacade
         {
             // string repositoryLocation = Repository.Clone(url, workdirPath);
             _repository = new Repository("/home/jakub/code/testRepo");
-            _logger.Info("repository cloned", "RepositoryFacade.ctor", new { id = url });
+            //_logger.Info("repository cloned", "RepositoryFacade.ctor", new { id = url });
         }
         catch (Exception e)
         {
-            _logger.Error("cannot clone repository", "RepositoryFacade.ctor", e);
+            _logger.LogCritical(e, "cannot clone repository");
             throw e;
         }
     }
-
+    
+    [MethodStats]
     public void analyze(IAnalyzer analyzer)
     {
         Dictionary<string, string> commitsCache = new Dictionary<string, string>();
 
         foreach (Branch repositoryBranch in _repository.Branches)
         {
-            _logger.Debug("analyzing branch", "RepositoryFacade.analyze", new { branchName = repositoryBranch.FriendlyName, id = url });
+            _logger.LogDebug("analyzing branch", "RepositoryFacade.analyze", new { branchName = repositoryBranch.FriendlyName, id = url });
             Commit childCommit = null;
             foreach (Commit parentCommit in repositoryBranch.Commits)
             {
-                _logger.Debug("analyzing commits", "RepositoryFacade.analyze", new { parentCommit = parentCommit.MessageShort, childCommit = childCommit?.MessageShort, id = url });
+                _logger.LogDebug(JsonSerializer.Serialize(new { message = "analyzing commits", parentCommit = parentCommit.MessageShort, childCommit = childCommit?.MessageShort, id = url }));
                 if (childCommit != null && (!commitsCache.ContainsKey(childCommit.Sha) || commitsCache[childCommit.Sha] != parentCommit.Sha))
                 {
                     analyzer.Compare(parentCommit, childCommit, url);

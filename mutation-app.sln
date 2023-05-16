@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mutation-app", "mutation-ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{A570ACC8-963F-4BD4-B1CA-65AB7859999C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mutation-seeker-orchestrator", "mutation-seeker-orchestrator\mutation-seeker-orchestrator.csproj", "{E3EA2469-4E2C-4BE4-991F-4A69EEF49F53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunicationTypes", "CommunicationTypes\CommunicationTypes.csproj", "{FD4DD387-72D4-46B0-AB4F-4645410F0A37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{A570ACC8-963F-4BD4-B1CA-65AB7859999C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A570ACC8-963F-4BD4-B1CA-65AB7859999C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A570ACC8-963F-4BD4-B1CA-65AB7859999C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3EA2469-4E2C-4BE4-991F-4A69EEF49F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3EA2469-4E2C-4BE4-991F-4A69EEF49F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3EA2469-4E2C-4BE4-991F-4A69EEF49F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3EA2469-4E2C-4BE4-991F-4A69EEF49F53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD4DD387-72D4-46B0-AB4F-4645410F0A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4DD387-72D4-46B0-AB4F-4645410F0A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4DD387-72D4-46B0-AB4F-4645410F0A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4DD387-72D4-46B0-AB4F-4645410F0A37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
