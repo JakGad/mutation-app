@@ -1,39 +1,56 @@
-// var builder = WebApplication.CreateBuilder(args);
-// var app = builder.Build();
-//
-// app.MapGet("/", () => "Hello World!");
-//
-// app.Run();
-
-using System.Text;
-using System.Text.Json;
 using CommunicationTypes;
-using RabbitMQ.Client;
+using System.Text.Json;
+using mutation_seeker_orchestrator.src;
+using mutation_seeker_orchestrator.src.Monitoring;
+using mutation_seeker_orchestrator.src.scrapper;
+using mutation_seeker_orchestrator.src.scrapper.status;
 
-var factory = new ConnectionFactory { HostName = "localhost", UserName = "myuser", Password = "mypassword", Port = 5672};
-using var connection = factory.CreateConnection();
-using var channel = connection.CreateModel();
 
-channel.QueueDeclare(queue: "seeker-tasks",
-    durable: true,
-    exclusive: false,
-    autoDelete: false,
-    arguments: null);
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+var logger = Logger.GetLogger();
 
-var message = new AnalyzeTask() { Url = "jg.com" };
-var body = JsonSerializer.SerializeToUtf8Bytes<SeekerTask>(message);
-
-var properties = channel.CreateBasicProperties();
-properties.Persistent = true;
-
-while (true)
+app.MapPut("/register-progress", async (HttpRequest req) =>
 {
-    channel.BasicPublish(exchange: string.Empty,
-        routingKey: "seeker-tasks",
-        basicProperties: properties,
-        body: body);
-    Console.WriteLine($" [x] Sent {JsonSerializer.Serialize<SeekerTask>(message)}");
+    try
+    {
+        var requestBodyString = new StreamReader(req.Body).ReadToEndAsync();
+        var progressStatus = JsonSerializer.Deserialize<StatusReportDTO>(await requestBodyString);
+        return progressStatus switch
+        {
+            RepoCompartisonResultDTO result => SaveResult(result),
+            RepoComparisonStartedDTO info => ComparisonStarted(info),
+            _ => UnknownEntity(),
+        };
+    }
+    catch
+    {
+        return Results.UnprocessableEntity();
+    }
+});
 
-    Console.WriteLine(" Press [enter] to exit.");
-    Console.ReadLine();
+
+IResult SaveResult(RepoCompartisonResultDTO result)
+{
+    ScrapperStatus.RegisterTaskCompletion(result.RepoUrl);
+    DbFacade.SaveResult(result);
+    return Results.Ok();
 }
+
+IResult ComparisonStarted(RepoComparisonStartedDTO info)
+{
+    ScrapperStatus.RegisterTaskStarted(info.RepoUrl);
+    return Results.Ok();
+}
+
+IResult UnknownEntity()
+{
+    logger.LogError("Unprocessable entity");
+    return Results.UnprocessableEntity();
+}
+
+
+var scrappingThread = Scrapper.GetScrapperTask();
+
+scrappingThread.Start();
+app.Run();

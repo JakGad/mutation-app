@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "mutation-app": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "SUPERVISOR_ADDRESS": "localhost",
+        "SUPERVISOR_PORT": "5208",
+        "QUEUE_ADDRESS": "localhost",
+        "QUEUE_LOGIN": "myuser",
+        "QUEUE_PASSWORD": "mypassword",
+        "QUEUE_PORT": "5672"
+      }
+    }
+  }
+}

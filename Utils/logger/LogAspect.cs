@@ -1,26 +1,24 @@
-using PostSharp.Aspects;
-using PostSharp.Serialization;
 using Microsoft.Extensions.Logging;
-using System.Diagnostics.Metrics;
-using System.Text.Json;
-using Google.Protobuf.WellKnownTypes;
+using PostSharp.Aspects;
 using PostSharp.Aspects.Configuration;
 using PostSharp.Aspects.Serialization;
+using System.Diagnostics.Metrics;
+using System.Text.Json;
 
 namespace Utils.logger;
 
 
 
 
-[OnMethodBoundaryAspectConfiguration(SerializerType=typeof(MsilAspectSerializer))]
-public class LogAspect: OnMethodBoundaryAspect
+[OnMethodBoundaryAspectConfiguration(SerializerType = typeof(MsilAspectSerializer))]
+public class LogAspect : OnMethodBoundaryAspect
 {
     public interface IMetrics
     {
         public Histogram<long> SuccessfulMethodExecutionTime { get; }
         public Counter<long> MethodError { get; }
     }
-    
+
     private ILogger _logger;
     private IMetrics _metrics;
     private bool _isInDebugMode;
@@ -34,14 +32,13 @@ public class LogAspect: OnMethodBoundaryAspect
         this._isInDebugMode = true;
         _id = System.Guid.NewGuid().ToString();
     }
-    
+
     public override void OnEntry(MethodExecutionArgs args)
     {
         _entryTimeStamp = DateTime.Now;
-        
+
         if (_isInDebugMode)
         {
-            
             _logger.LogInformation(JsonSerializer.Serialize(new
             {
                 id = _id,
@@ -71,8 +68,9 @@ public class LogAspect: OnMethodBoundaryAspect
 
     public override void OnException(MethodExecutionArgs args)
     {
-        _metrics.MethodError.Add(1,  new KeyValuePair<string, object?>("method", args.Method.Name));
-        _logger.LogError(args.Exception, JsonSerializer.Serialize(new {
+        _metrics.MethodError.Add(1, new KeyValuePair<string, object?>("method", args.Method.Name));
+        _logger.LogError(args.Exception, JsonSerializer.Serialize(new
+        {
             id = _id,
             method = args.Method.Name,
             eventName = "exception_exit",

@@ -15,11 +15,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="MongoDB.Driver" Version="2.20.0" />
+      <PackageReference Include="mutation-app.CommunicationTypes" Version="1.0.1" />
+      <PackageReference Include="mutation-app.Utils" Version="1.0.1" />
       <PackageReference Include="RabbitMQ.Client" Version="6.5.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\CommunicationTypes\CommunicationTypes.csproj" />
     </ItemGroup>
 
 </Project>

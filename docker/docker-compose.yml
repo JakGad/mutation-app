@@ -3,9 +3,11 @@ version: "3.8"
 networks:
   grafana-bridge:
   oltp-bridge:
+  main-bridge:
+  mongo-bridge:
 
 services:
-  rabbitmq3:
+  rabbitmq:
     container_name: "rabbitmq"
     image: rabbitmq:3.11.13-management-alpine
     environment:
@@ -16,6 +18,8 @@ services:
       - '5672:5672'
       # HTTP management UI
       - '15672:15672'
+    networks:
+     - main-bridge
         
   grafana:
     image: grafana/grafana:8.2.6
@@ -69,3 +73,91 @@ services:
       - "4317:4317"
     networks:
       - oltp-bridge
+
+  mutation-app:
+    image: mutation-app:latest
+    container_name: "mutation-app"
+    environment:
+     - SUPERVISOR_ADDRESS=mutation-orchestrator
+     - SUPERVISOR_PORT=5208
+     - QUEUE_ADDRESS=rabbitmq
+     - QUEUE_LOGIN=myuser
+     - QUEUE_PASSWORD=mypassword
+     - QUEUE_PORT=5672
+     - OPTL_COLLECTOR=http://collector:4317
+    networks:
+     - main-bridge
+     - oltp-bridge
+    links:
+      - mutation-orchestrator
+      - rabbitmq
+       
+  mutation-app2:
+    image: mutation-app:latest
+    container_name: "mutation-app2"
+    environment:
+      - SUPERVISOR_ADDRESS=mutation-orchestrator
+      - SUPERVISOR_PORT=5208
+      - QUEUE_ADDRESS=rabbitmq
+      - QUEUE_LOGIN=myuser
+      - QUEUE_PASSWORD=mypassword
+      - QUEUE_PORT=5672
+      - OPTL_COLLECTOR=http://collector:4317
+    networks:
+      - main-bridge
+      - oltp-bridge
+    links: 
+      - mutation-orchestrator
+      - rabbitmq
+        
+  mutation-app3:
+    image: mutation-app:latest
+    container_name: "mutation-app3"
+    environment:
+      - SUPERVISOR_ADDRESS=mutation-orchestrator
+      - SUPERVISOR_PORT=5208
+      - QUEUE_ADDRESS=rabbitmq
+      - QUEUE_LOGIN=myuser
+      - QUEUE_PASSWORD=mypassword
+      - QUEUE_PORT=5672
+      - OPTL_COLLECTOR=http://collector:4317
+    networks:
+      - main-bridge
+      - oltp-bridge
+    links:
+      - mutation-orchestrator
+      - rabbitmq
+  
+  mutation-orchestrator:
+    image: mutation-seeker-orchestrator:latest
+    container_name: "mutation-orchestrator"
+    environment:
+      - QUEUE_ADDRESS=rabbitmq
+      - QUEUE_LOGIN=myuser
+      - QUEUE_PASSWORD=mypassword
+      - QUEUE_PORT=5672
+      - ASPNETCORE_URLS=http://0.0.0.0:5208
+      - MONGO_CONNECTION_STRING=mongodb://root:example@mongo:27017
+      - DATABASE_NAME=mutation
+      - COLLECTION_NAME=mutation
+      - OPTL_COLLECTOR=http://collector:4317
+    networks:
+      - main-bridge
+      - mongo-bridge
+      - oltp-bridge
+    links: 
+      - mongo
+      - rabbitmq
+
+  mongo:
+    container_name: "mongo"
+    image: mongo
+    ports:
+        - "27017:27017"
+    volumes:
+      - ./mongo-data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    networks:
+      - mongo-bridge

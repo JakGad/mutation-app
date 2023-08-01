@@ -1,11 +1,12 @@
 using Microsoft.Extensions.Logging;
 using OpenTelemetry.Logs;
 
-namespace mutation_app.Monitoring;
+namespace mutation_app.src.Monitoring;
 
 public class Logger
 {
     private static ILogger? _instance;
+    private static SeekerEnvs _envVariables = SeekerEnvs.GetEnvs();
 
     public static ILogger GetLogger()
     {
@@ -16,10 +17,10 @@ public class Logger
                 opt.IncludeFormattedMessage = true;
                 opt.IncludeScopes = true;
                 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-                opt.AddOtlpExporter();
-            }).AddConsole()).CreateLogger<Program>();
+                opt.AddOtlpExporter(options => { options.Endpoint = new Uri(_envVariables.OptlCollector); });
+            }).AddConsole().SetMinimumLevel(LogLevel.Debug)).CreateLogger<Program>();
         }
-        
+
         return _instance;
     }
 }

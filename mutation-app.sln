@@ -1,12 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mutation-app", "mutation-app\mutation-app.csproj", "{B9680B4E-E327-40AC-ADB0-130D505DE763}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mutation-app", "mutation-app\mutation-app.csproj", "{B9680B4E-E327-40AC-ADB0-130D505DE763}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{A570ACC8-963F-4BD4-B1CA-65AB7859999C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{A570ACC8-963F-4BD4-B1CA-65AB7859999C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mutation-seeker-orchestrator", "mutation-seeker-orchestrator\mutation-seeker-orchestrator.csproj", "{E3EA2469-4E2C-4BE4-991F-4A69EEF49F53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mutation-seeker-orchestrator", "mutation-seeker-orchestrator\mutation-seeker-orchestrator.csproj", "{E3EA2469-4E2C-4BE4-991F-4A69EEF49F53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommunicationTypes", "CommunicationTypes\CommunicationTypes.csproj", "{FD4DD387-72D4-46B0-AB4F-4645410F0A37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommunicationTypes", "CommunicationTypes\CommunicationTypes.csproj", "{FD4DD387-72D4-46B0-AB4F-4645410F0A37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,9 +29,15 @@ Global
 		{E3EA2469-4E2C-4BE4-991F-4A69EEF49F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3EA2469-4E2C-4BE4-991F-4A69EEF49F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3EA2469-4E2C-4BE4-991F-4A69EEF49F53}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD4DD387-72D4-46B0-AB4F-4645410F0A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD4DD387-72D4-46B0-AB4F-4645410F0A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4DD387-72D4-46B0-AB4F-4645410F0A37}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4DD387-72D4-46B0-AB4F-4645410F0A37}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{FD4DD387-72D4-46B0-AB4F-4645410F0A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD4DD387-72D4-46B0-AB4F-4645410F0A37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A864CBC0-7C14-428A-A61A-701159990473}
 	EndGlobalSection
 EndGlobal

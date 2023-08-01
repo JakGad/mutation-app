@@ -3,3 +3,10 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+.idea
+.vs
+docker/collector
+docker/data
+docker/mongo-data
+docker/prometheus
+docker/tempo

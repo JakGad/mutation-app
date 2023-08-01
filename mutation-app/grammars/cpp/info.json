@@ -1,6 +1,0 @@
-{
-  "extensions": ["cpp"],
-  "lexer": "CPP14Lexer",
-  "parser": "CPP14Parser",
-  "root": "translationUnit"
-}
