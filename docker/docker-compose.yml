@@ -141,6 +141,7 @@ services:
       - DATABASE_NAME=mutation
       - COLLECTION_NAME=mutation
       - OPTL_COLLECTOR=http://collector:4317
+      - DEFAULT_MAX_METRIC=300
     networks:
       - main-bridge
       - mongo-bridge

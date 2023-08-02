@@ -19,8 +19,6 @@ channel.QueueDeclare(queue: "seeker-tasks",
     arguments: null);
 channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
 
-Console.WriteLine(" [*] Waiting for messages.");
-
 var consumer = new EventingBasicConsumer(channel);
 
 MessageAnalyzer analyzer = new MessageAnalyzer(channel);

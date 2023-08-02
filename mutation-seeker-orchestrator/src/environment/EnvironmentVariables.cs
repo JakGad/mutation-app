@@ -16,6 +16,7 @@ internal class EnvironmentVariables
     public string QueuePassword { get; set; }
     public int QueuePort { get; set; }
     public string OptlCollector { get; set; }
+    public int DefaultMaxMetric { get; set; }
 
     private static EnvReader<EnvironmentVariables>? _instance;
 

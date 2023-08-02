@@ -18,6 +18,7 @@ public class EndTask : SeekerTask
 public class AnalyzeTask : SeekerTask
 {
     public string Url { get; set; }
+    public int MaxMetricDifference { get; set; }
 }
 
 [Serializable]

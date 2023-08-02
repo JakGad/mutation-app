@@ -21,12 +21,22 @@ public struct CommitComparisonResult
     public string CommitHash;
     public string ParentCommitHash;
     public List<ComparisonResult> FileResults;
+    public long MetricDifferenceBeforeLimiting;
 
     public CommitComparisonResult(string commitHash, string parentCommitHash, List<ComparisonResult> fileResults)
     {
         CommitHash = commitHash;
         ParentCommitHash = parentCommitHash;
         FileResults = fileResults;
+        MetricDifferenceBeforeLimiting = FileResults.Aggregate((long)0, (result, comparisonResult) => result + comparisonResult.Score);
+    }
+    
+    public CommitComparisonResult(CommitComparisonResult toCopy)
+    {
+        CommitHash = toCopy.CommitHash;
+        ParentCommitHash = toCopy.ParentCommitHash;
+        FileResults = toCopy.FileResults;
+        MetricDifferenceBeforeLimiting = toCopy.MetricDifferenceBeforeLimiting;
     }
 }
 

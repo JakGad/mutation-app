@@ -26,4 +26,5 @@ ENV MONGO_CONNECTION_STRING="mongodb://root:example@localhost:27017"
 ENV DATABASE_NAME="mutation"
 ENV COLLECTION_NAME="mutation"
 ENV OPTL_COLLECTOR="http://collector:4317"
+ENV DEFAULT_MAX_METRIC="300"
 ENTRYPOINT ["dotnet", "mutation-seeker-orchestrator.dll"]

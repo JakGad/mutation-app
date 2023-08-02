@@ -66,8 +66,8 @@ public class MessageAnalyzer
             ReportStart(task.Url);
             RepositoryFacade repo = new RepositoryFacade(task.Url);
             var result = repo.Analyze(new NaiveEditorialDistanceAnalyzer());
-
-            var json = JsonSerializer.Serialize(_dtoMapper.MapToDTO(result));
+            var cleanedResult = LimitValuesInResult(result, task.MaxMetricDifference);
+            var json = JsonSerializer.Serialize(_dtoMapper.MapToDTO(cleanedResult));
             var dataToSend = new StringContent(json, Encoding.UTF8, "application/json");
 
             var response = await _httpClient.PutAsync(_responseAddress, dataToSend);
@@ -80,6 +80,21 @@ public class MessageAnalyzer
         {
             _logger.LogError(ex.ToString());
         }
+    }
+
+    private RepoComparisonResult LimitValuesInResult(RepoComparisonResult dataToClean,
+        int maxFileMetricDifference)
+    {
+        var cleanedResults = dataToClean.Results.AsParallel().Select(commitResult =>
+        {
+            var newCommitComparison = new CommitComparisonResult(commitResult);
+            newCommitComparison.FileResults = commitResult.FileResults.AsParallel()
+                .Where(fileResult => fileResult.Score <= maxFileMetricDifference).ToList();
+
+            return newCommitComparison;
+        }).ToList();
+
+        return new RepoComparisonResult(dataToClean.Url, cleanedResults);
     }
 
     private async Task<bool> ReportStart(string url)

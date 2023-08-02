@@ -13,6 +13,7 @@ namespace mutation_seeker_orchestrator.src.scrapper
     {
         private const int MaxMessages = 32;
         private static ILogger _logger = Logger.GetLogger();
+        private static EnvironmentVariables _environment = EnvironmentVariables.GetEnvs();
         static async void RunScrapping()
         {
             
@@ -42,7 +43,7 @@ namespace mutation_seeker_orchestrator.src.scrapper
             while(await addressIterator.MoveNextAsync())
             {
                 await blocker.Wait();
-                var message = new AnalyzeTask() { Url = addressIterator.Current };
+                var message = new AnalyzeTask() { Url = addressIterator.Current, MaxMetricDifference = _environment.DefaultMaxMetric};
                 var body = JsonSerializer.SerializeToUtf8Bytes<SeekerTask>(message);
                 channel.BasicPublish(exchange: string.Empty,
                     routingKey: "seeker-tasks",
