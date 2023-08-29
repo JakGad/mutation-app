@@ -3,16 +3,11 @@ receivers:
     protocols:
       grpc:
       http:
-
 exporters:
   prometheusremotewrite:
     endpoint: 'http://prometheus:9090/api/v1/write'
     tls:
       insecure: true
-#  otlp:
-#    endpoint: tempo:4317
-#    tls:
-#      insecure: true
   loki:
     endpoint: http://loki:3100/loki/api/v1/push
     format: json
@@ -33,9 +28,6 @@ service:
     metrics:
       receivers: [ otlp ]
       exporters: [ prometheusremotewrite ]
-#    traces:
-#      receivers: [ otlp ]
-#      exporters: [ otlp, logging ]
     logs:
       receivers: [ otlp ]
       exporters: [ loki ]
