@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\Users\jakub\AppData\Local\Microsoft\WinGet\Links\kompose.exe convert
+    kompose.version: 1.30.0 (9d8dcb518)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mutation-app
+  name: mutation-app
+  namespace: mutation-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: mutation-app
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: C:\Users\jakub\AppData\Local\Microsoft\WinGet\Links\kompose.exe convert
+        kompose.version: 1.30.0 (9d8dcb518)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/docker-main-bridge: "true"
+        io.kompose.network/docker-oltp-bridge: "true"
+        io.kompose.service: mutation-app
+    spec:
+      containers:
+        - env:
+            - name: OPTL_COLLECTOR
+              value: http://collector:4317
+            - name: QUEUE_ADDRESS
+              value: rabbitmq
+            - name: QUEUE_LOGIN
+              value: myuser
+            - name: QUEUE_PASSWORD
+              value: mypassword
+            - name: QUEUE_PORT
+              value: "5672"
+            - name: SUPERVISOR_ADDRESS
+              value: mutation-orchestrator
+            - name: SUPERVISOR_PORT
+              value: "5208"
+          image: docker.nexus.jbox.local/docker-local/mutation-app:1_0_3
+          name: mutation-app
+          resources: {}
+      restartPolicy: Always
+status: {}

@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\Users\jakub\AppData\Local\Microsoft\WinGet\Links\kompose.exe convert
+    kompose.version: 1.30.0 (9d8dcb518)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mutation-orchestrator
+  name: mutation-orchestrator
+  namespace: mutation-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: mutation-orchestrator
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: C:\Users\jakub\AppData\Local\Microsoft\WinGet\Links\kompose.exe convert
+        kompose.version: 1.30.0 (9d8dcb518)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/docker-main-bridge: "true"
+        io.kompose.network/docker-mongo-bridge: "true"
+        io.kompose.network/docker-oltp-bridge: "true"
+        io.kompose.service: mutation-orchestrator
+    spec:
+      containers:
+        - env:
+            - name: ASPNETCORE_URLS
+              value: http://0.0.0.0:5208
+            - name: COLLECTION_NAME
+              value: mutation
+            - name: DATABASE_NAME
+              value: mutation
+            - name: DEFAULT_MAX_METRIC
+              value: "300"
+            - name: MONGO_CONNECTION_STRING
+              value: mongodb://root:example@mongo:27017
+            - name: OPTL_COLLECTOR
+              value: http://collector:4317
+            - name: QUEUE_ADDRESS
+              value: rabbitmq
+            - name: QUEUE_LOGIN
+              value: myuser
+            - name: QUEUE_PASSWORD
+              value: mypassword
+            - name: QUEUE_PORT
+              value: "5672"
+          image: docker.nexus.jbox.local/docker-local/mutation-seeker-orchestrator:1_0_2
+          name: mutation-orchestrator
+          resources: {}
+      restartPolicy: Always
+status: {}
