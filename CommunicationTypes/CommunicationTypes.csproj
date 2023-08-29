@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
@@ -10,7 +10,7 @@
         <Product>$(SolutionName)</Product>
         <EnforceCodeStyleInBuild>False</EnforceCodeStyleInBuild>
         <PackageId>mutation-app.CommunicationTypes</PackageId>
-        <Version>1.0.2</Version>
+        <Version>1.0.4</Version>
     </PropertyGroup>
 
 </Project>

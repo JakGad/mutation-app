@@ -11,7 +11,10 @@
         "QUEUE_ADDRESS": "localhost",
         "QUEUE_LOGIN": "myuser",
         "QUEUE_PASSWORD": "mypassword",
-        "QUEUE_PORT": "5672"
+        "QUEUE_PORT": "5672",
+        "OPTL_COLLECTOR": "http://collector:4317",
+        "DEFAULT_MAX_METRIC": "300"
+                
       },
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:5208"

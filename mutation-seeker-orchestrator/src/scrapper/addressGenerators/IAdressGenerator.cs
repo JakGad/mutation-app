@@ -5,7 +5,7 @@ namespace mutation_seeker_orchestrator.src.scrapper.addressGenerators
 {
     public enum SupportedLanguages
     {
-        Cpp
+        Csharp, C, Java, Cpp,  Js, Python, Ruby, Rust, Scala, Ts
     }
     public abstract class AddressGenerator
     {
@@ -41,9 +41,9 @@ namespace mutation_seeker_orchestrator.src.scrapper.addressGenerators
             return _finishedUrls.Contains(url) || _urlsBeingAnalyzed.Contains(url);
         }
 
-        public async void LoadAnalyzedUrls(string generatorName)
+        public async void LoadAnalyzedUrls()
         {
-            _finishedUrls = await DbFacade.GetReposUrl(generatorName);
+            _finishedUrls = await DbFacade.GetReposUrl();
             CurrentPhase = Phases.Work;
         }
 
@@ -53,7 +53,7 @@ namespace mutation_seeker_orchestrator.src.scrapper.addressGenerators
             this.GeneratorName = generatorName;
 
             CurrentPhase = Phases.Indexing;
-            LoadAnalyzedUrls(generatorName);
+            LoadAnalyzedUrls();
             ScrapperStatus.UrlAnalyzeFinishedEvent += UrlAnalyzeFinished;
         }
 

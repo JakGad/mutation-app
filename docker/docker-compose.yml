@@ -75,7 +75,7 @@ services:
       - oltp-bridge
 
   mutation-app:
-    image: mutation-app:latest
+    image: docker.nexus.jbox.local/docker-local/mutation-app:1_0_3
     container_name: "mutation-app"
     environment:
      - SUPERVISOR_ADDRESS=mutation-orchestrator
@@ -92,44 +92,44 @@ services:
       - mutation-orchestrator
       - rabbitmq
        
-  mutation-app2:
-    image: mutation-app:latest
-    container_name: "mutation-app2"
-    environment:
-      - SUPERVISOR_ADDRESS=mutation-orchestrator
-      - SUPERVISOR_PORT=5208
-      - QUEUE_ADDRESS=rabbitmq
-      - QUEUE_LOGIN=myuser
-      - QUEUE_PASSWORD=mypassword
-      - QUEUE_PORT=5672
-      - OPTL_COLLECTOR=http://collector:4317
-    networks:
-      - main-bridge
-      - oltp-bridge
-    links: 
-      - mutation-orchestrator
-      - rabbitmq
+  # mutation-app2:
+  #   image: mutation-app:latest
+  #   container_name: "mutation-app2"
+  #   environment:
+  #     - SUPERVISOR_ADDRESS=mutation-orchestrator
+  #     - SUPERVISOR_PORT=5208
+  #     - QUEUE_ADDRESS=rabbitmq
+  #     - QUEUE_LOGIN=myuser
+  #     - QUEUE_PASSWORD=mypassword
+  #     - QUEUE_PORT=5672
+  #     - OPTL_COLLECTOR=http://collector:4317
+  #   networks:
+  #     - main-bridge
+  #     - oltp-bridge
+  #   links: 
+  #     - mutation-orchestrator
+  #     - rabbitmq
         
-  mutation-app3:
-    image: mutation-app:latest
-    container_name: "mutation-app3"
-    environment:
-      - SUPERVISOR_ADDRESS=mutation-orchestrator
-      - SUPERVISOR_PORT=5208
-      - QUEUE_ADDRESS=rabbitmq
-      - QUEUE_LOGIN=myuser
-      - QUEUE_PASSWORD=mypassword
-      - QUEUE_PORT=5672
-      - OPTL_COLLECTOR=http://collector:4317
-    networks:
-      - main-bridge
-      - oltp-bridge
-    links:
-      - mutation-orchestrator
-      - rabbitmq
+  # mutation-app3:
+  #   image: mutation-app:latest
+  #   container_name: "mutation-app3"
+  #   environment:
+  #     - SUPERVISOR_ADDRESS=mutation-orchestrator
+  #     - SUPERVISOR_PORT=5208
+  #     - QUEUE_ADDRESS=rabbitmq
+  #     - QUEUE_LOGIN=myuser
+  #     - QUEUE_PASSWORD=mypassword
+  #     - QUEUE_PORT=5672
+  #     - OPTL_COLLECTOR=http://collector:4317
+  #   networks:
+  #     - main-bridge
+  #     - oltp-bridge
+  #   links:
+  #     - mutation-orchestrator
+  #     - rabbitmq
   
   mutation-orchestrator:
-    image: mutation-seeker-orchestrator:latest
+    image: docker.nexus.jbox.local/docker-local/mutation-seeker-orchestrator:1_0_2
     container_name: "mutation-orchestrator"
     environment:
       - QUEUE_ADDRESS=rabbitmq
@@ -142,6 +142,8 @@ services:
       - COLLECTION_NAME=mutation
       - OPTL_COLLECTOR=http://collector:4317
       - DEFAULT_MAX_METRIC=300
+    ports: 
+      - "5208:5208"
     networks:
       - main-bridge
       - mongo-bridge

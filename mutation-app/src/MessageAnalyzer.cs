@@ -36,6 +36,8 @@ public class MessageAnalyzer
         {
             var body = ea.Body.ToArray();
             var message = JsonSerializer.Deserialize<SeekerTask>(body);
+            
+            _logger.LogInformation("Received {@message}", message);
             switch (message)
             {
                 case AnalyzeTask task:
@@ -51,7 +53,7 @@ public class MessageAnalyzer
         }
         catch (Exception ex)
         {
-            _logger.LogError($"Error processing task: {ex}");
+            _logger.LogError("Error processing {@message}, {@error}", ea.Body.ToString(), ex);
         }
         finally
         {
@@ -73,12 +75,12 @@ public class MessageAnalyzer
             var response = await _httpClient.PutAsync(_responseAddress, dataToSend);
             if (!response.IsSuccessStatusCode)
             {
-                _logger.LogError($"Unable to send response for: {task.Url}. Status code: {response.StatusCode}");
+                _logger.LogError("Unable to send response for {@url}. Status code: {@code}", task.Url, response.StatusCode);
             }
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex.ToString());
+            _logger.LogError("Error analyzing {@url} {@error}", task.Url, ex);
         }
     }
 
@@ -114,6 +116,6 @@ public class MessageAnalyzer
 
     private void Unknown(byte[] task)
     {
-        _logger.LogError($"Task unknown: {task}");
+        _logger.LogError("Task unknown {@task}", task.ToString());
     }
 }

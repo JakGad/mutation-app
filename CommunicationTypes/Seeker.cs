@@ -39,6 +39,7 @@ public class RepoComparisonStartedDTO : StatusReportDTO
 [Serializable]
 public class RepoCompartisonResultDTO: StatusReportDTO
 {
+    public string Status { get; set; } = "complete";
     public List<CommitComparisonResultDTO>? CommitResults { get; set; }
 }
 

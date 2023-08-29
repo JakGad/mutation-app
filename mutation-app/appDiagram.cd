@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="mutation_app.src.SeekerEnvs">
+    <Position X="19.75" Y="8.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAEAAACAAABAAAAAAAAEAAAAAAAKAAAAAAEAEAAA=</HashCode>
+      <FileName>src\SeekerEnvs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_app.src.DTOMapper">
+    <Position X="16" Y="6" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAEAAAQAAAAQAAAAAA=</HashCode>
+      <FileName>src\DTOMapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mutation_app.src.GitExtensions">
+    <Position X="12" Y="1" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAABAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>src\GitExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_app.src.MessageAnalyzer">
+    <Position X="5" Y="0.75" Width="7" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAEIAQAAgABAAAAAAIQAEAAAAACAAAAAACBA=</HashCode>
+      <FileName>src\MessageAnalyzer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_app.src.NaiveEditorialDistanceAnalyzer">
+    <Position X="11" Y="8.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIACAAIAAAABAAAAAACA=</HashCode>
+      <FileName>src\NaiveEditorialDistanceAnalyzer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mutation_app.src.RepositoryFacade">
+    <Position X="0.5" Y="1" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAJAAAAAAAAAAUAAIAUAAAAAAAAIBAAAAAA=</HashCode>
+      <FileName>src\RepositoryFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_app.src.TreeFactory">
+    <Position X="17.25" Y="1" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAggAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>src\treeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_app.src.Monitoring.Metrics">
+    <Position X="1" Y="6" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAAAAAACAAAAAAAAAAAQAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>src\Monitoring\Metrics.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="mutation_app.src.Monitoring.Logger">
+    <Position X="6.75" Y="7.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAQAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Monitoring\Logger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_app.src.CopyOfTreeFactory">
+    <Position X="17.5" Y="1.25" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAggAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>src\treeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLexer" Collapsed="true">
+    <Position X="2.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JgjADC1Y8P8IEIH4iikl5goDKjVLJC6l3ShQUSTjBu0=</HashCode>
+      <FileName>src\grammars\c\CLexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CorundumLexer" Collapsed="true">
+    <Position X="11" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>LQQEDgwQMK4H6NAIyEAACASAggkooJoWAASYAASIAAY=</HashCode>
+      <FileName>src\grammars\ruby\CorundumLexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CorundumParser" Collapsed="true">
+    <Position X="11" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>LUfOXk2ct74f/tai/UM9SIf8ol27ttg2cZ7Z6Xa4wiY=</HashCode>
+      <FileName>src\grammars\ruby\CorundumParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CParser" Collapsed="true">
+    <Position X="2.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>L83tPz948P8L2sH13m839+8nrTd/5e/n3bh/2+frvu0=</HashCode>
+      <FileName>src\grammars\c\CParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CPP14Lexer" Collapsed="true">
+    <Position X="12.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>NADADy9YEe4oNLH6ij9ltgJJviUPZC5l+ShI9yynduw=</HashCode>
+      <FileName>src\grammars\cpp\CPP14Lexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CPP14Parser" Collapsed="true">
+    <Position X="12.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/73v///9+f9/fvP37399//7P//Wv9X3//3n//3////0=</HashCode>
+      <FileName>src\grammars\cpp\CPP14Parser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharpParser" Collapsed="true">
+    <Position X="14.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>///+//9/////u////v/2/v+/v3//P/3////+9577/f0=</HashCode>
+      <FileName>src\grammars\csharp\CSharpParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharpLexer" Collapsed="true">
+    <Position X="14.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>zZ+0H2x3/K9vK8OIdnr2/I62sl2/LwrbLMTu5YSrJL0=</HashCode>
+      <FileName>src\grammars\csharp\CSharpLexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Java9Lexer" Collapsed="true">
+    <Position X="16.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>jbJHHA6WeIwuDpDYUE6xCo4TMxlpHI6bGBAI4EToAEw=</HashCode>
+      <FileName>src\grammars\java\Java9Lexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Java9Parser" Collapsed="true">
+    <Position X="16.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>z//v//7+//1/X/7////3v7////37/77/f/t/+3////8=</HashCode>
+      <FileName>src\grammars\java\Java9Parser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JavaScriptLexer" Collapsed="true">
+    <Position X="7.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KgiAPm19layp6KTcIVd1NDoROuc5SS8tUzRk00TWY2c=</HashCode>
+      <FileName>src\grammars\js\JavaScriptLexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JavaScriptParser" Collapsed="true">
+    <Position X="7.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>Js3J/u//1e/v+q2V57/9tFqdOOczyT19eyX383beZ28=</HashCode>
+      <FileName>src\grammars\js\JavaScriptParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PythonLexer" Collapsed="true">
+    <Position X="0.5" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>m4FkPAwwOq5mqJQLQWWQjCg2ohmICMI6AJUCARzoBF4=</HashCode>
+      <FileName>src\grammars\python\PythonLexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PythonParser" Collapsed="true">
+    <Position X="0.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>38duPZ35O6Zmyr4DbWe0jf62plmtruA/EjfKiT7+FV4=</HashCode>
+      <FileName>src\grammars\python\PythonParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RustLexer" Collapsed="true">
+    <Position X="5.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>5UvmXH84WP8G7uLtAihgWNFAti8aCAqGXRAIk+eAkQQ=</HashCode>
+      <FileName>src\grammars\rust\RustLexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RustParser" Collapsed="true">
+    <Position X="5.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/////v//2v+v/u/vZu/+/vPd//+/f//v/9v//////+8=</HashCode>
+      <FileName>src\grammars\rust\RustParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScalaLexer" Collapsed="true">
+    <Position X="4" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AehfDY4R8P8ghB4IAgABQPACAgFAr3+9AAAA1IfeAEQ=</HashCode>
+      <FileName>src\grammars\scala\ScalaLexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScalaParser" Collapsed="true">
+    <Position X="4" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wf9/v95X8f8rvn4gFq7Vz/9/xJXz////b/Vl9Z/+F18=</HashCode>
+      <FileName>src\grammars\scala\ScalaParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TypeScriptLexer" Collapsed="true">
+    <Position X="9.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KgiIPmxdFayp5KTcYVd1NDpROmfhaS8tUzRI20SWa+c=</HashCode>
+      <FileName>src\grammars\ts\TypeScriptLexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TypeScriptParser" Collapsed="true">
+    <Position X="9.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>Ju3f/+//X+37/q7/4/f1/V+dfXfz7329f73///beb+8=</HashCode>
+      <FileName>src\grammars\ts\TypeScriptParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="mutation_app.src.CommitComparisonResult">
+    <Position X="23.5" Y="1" Width="6.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAgAgAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>src\IAnalyzer.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="mutation_app.src.ComparisonResult">
+    <Position X="23.5" Y="3.75" Width="6.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgEAAAAAAAAAAAAAAAAAABQAAAQAAA=</HashCode>
+      <FileName>src\IAnalyzer.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="mutation_app.src.RepoComparisonResult">
+    <Position X="24" Y="7.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>src\IAnalyzer.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="mutation_app.src.IAnalyzer">
+    <Position X="12.25" Y="4.5" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>src\IAnalyzer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="mutation_app.src.IDTOMapper">
+    <Position X="12.25" Y="2.75" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAA=</HashCode>
+      <FileName>src\DTOMapper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

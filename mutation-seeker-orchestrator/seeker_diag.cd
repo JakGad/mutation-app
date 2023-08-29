@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="mutation_seeker_orchestrator.src.DbFacade">
+    <Position X="15.25" Y="11" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQEAAAAAAAAgAIAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>src\DbFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_seeker_orchestrator.src.dataStructures.RepoResult">
+    <Position X="11.5" Y="11.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>src\dataStructures\Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_seeker_orchestrator.src.dataStructures.CommitResult">
+    <Position X="15.25" Y="13.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAgAACAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\dataStructures\Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_seeker_orchestrator.src.dataStructures.FileResult">
+    <Position X="12" Y="13.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAABAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\dataStructures\Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_seeker_orchestrator.src.environment.EnvironmentVariables">
+    <Position X="24.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEQEAAAAAEAAAAAAAAAAEAAACAAAKAAAAAAEAFAAA=</HashCode>
+      <FileName>src\environment\EnvironmentVariables.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_seeker_orchestrator.src.Monitoring.Logger">
+    <Position X="21.25" Y="5.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAQAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Monitoring\Logger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_seeker_orchestrator.src.Monitoring.Metrics" BaseTypeListCollapsed="true">
+    <Position X="24.25" Y="5.25" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAAAAAACAAAAAAAAAAAQAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>src\Monitoring\Metrics.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="mutation_seeker_orchestrator.src.scrapper.addressGenerators.AddressFactory">
+    <Position X="2" Y="4" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\scrapper\addressGenerators\AddressFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_seeker_orchestrator.src.scrapper.addressGenerators.GithubResponse">
+    <Position X="21.75" Y="10.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="mutation_seeker_orchestrator.src.scrapper.addressGenerators.GithubResponse.GithubItem">
+        <TypeIdentifier>
+          <NewMemberFileName>src\scrapper\addressGenerators\GithubGenerator.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\scrapper\addressGenerators\GithubGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_seeker_orchestrator.src.scrapper.addressGenerators.GithubGenerator">
+    <Position X="2" Y="9.5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAgAAYAAAAAAAAAYAAgAAAAA=</HashCode>
+      <FileName>src\scrapper\addressGenerators\GithubGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_seeker_orchestrator.src.scrapper.addressGenerators.AddressGenerator">
+    <Position X="2" Y="5.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIQAAIAAAEBAAAMAAAAAAAAAQQgAAAAAAA=</HashCode>
+      <FileName>src\scrapper\addressGenerators\IAdressGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_seeker_orchestrator.src.scrapper.status.ScrapperStatus">
+    <Position X="9.75" Y="3.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAQIAAAAAAQAAAAAAAAAAAAAAAAAAgABAAAAAAABA=</HashCode>
+      <FileName>src\scrapper\status\ScrapperStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_seeker_orchestrator.src.scrapper.status.WaitForQueue">
+    <Position X="12.75" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AMAAAAAAAAAAAACgAAAAAAAAAAQCAAAAAAAgAAACAAA=</HashCode>
+      <FileName>src\scrapper\status\WaitForQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mutation_seeker_orchestrator.src.scrapper.Scrapper">
+    <Position X="9.75" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAABAIAAAYAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\scrapper\getScrapperTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="17.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Enum Name="mutation_seeker_orchestrator.src.scrapper.addressGenerators.SupportedGitPages">
+    <Position X="28.75" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\scrapper\addressGenerators\AddressFactory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="mutation_seeker_orchestrator.src.scrapper.addressGenerators.SupportedLanguages">
+    <Position X="30.75" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>DAAAEAAAAAAEIAAAAAAAAAAAAAAKAAAIAAAAgACAAAA=</HashCode>
+      <FileName>src\scrapper\addressGenerators\IAdressGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="mutation_seeker_orchestrator.src.scrapper.status.Phases">
+    <Position X="27" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAghAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>src\scrapper\status\ScrapperStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

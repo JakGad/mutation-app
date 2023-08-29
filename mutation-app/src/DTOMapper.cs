@@ -34,7 +34,7 @@ public class DTOMapper : IDTOMapper
             CommitHash = objectToMapFrom.CommitHash,
             CommitParentHash = objectToMapFrom.ParentCommitHash,
             FileResults = objectToMapFrom.FileResults.Select(MapFileResult).ToList(),
-            ScoreOverall = objectToMapFrom.FileResults.Sum((x) => x.Score),
+            ScoreOverall = objectToMapFrom.MetricDifferenceBeforeLimiting
         };
     }
 

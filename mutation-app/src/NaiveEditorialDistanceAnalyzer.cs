@@ -12,8 +12,6 @@ public class NaiveEditorialDistanceAnalyzer : IAnalyzer
     
     public List<ComparisonResult> Compare(Commit firstCommit, Commit secondCommit, string repoId)
     {
-        _logger.LogDebug(JsonSerializer.Serialize(new { message = "analyzing", firstCommit = new { sha = firstCommit.Sha, filesAmount = firstCommit.Tree.Count }, secondCommit = new { sha = secondCommit.Sha, filesAmount = secondCommit.Tree.Count }, id = repoId }));
-
         Dictionary<string, TreeEntry> firstCommitFiles = new Dictionary<string, TreeEntry>(
             firstCommit.Tree.Where(file => file.TargetType == TreeEntryTargetType.Blob).Select((file) => new KeyValuePair<string, TreeEntry>(file.Path, file))
             );
@@ -24,15 +22,9 @@ public class NaiveEditorialDistanceAnalyzer : IAnalyzer
         {
             if (firstCommitFiles.TryGetValue(newFile.Path, out TreeEntry? oldFile))
             {
-                //_logger.LogDebug(JsonSerializer.Serialize(new { message = "file found", file1 = oldFile.Target.Peel<Blob>().GetContentText(), id = repoId, file2= newFile.Target.Peel<Blob>().GetContentText() }));
-
                 var fileComparison = CompareFiles(oldFile, newFile, repoId);
                 if (fileComparison is { Score: > 0 })
                     result.Add(fileComparison.Value);
-            }
-            else
-            {
-                _logger.LogDebug(JsonSerializer.Serialize(new { message = "no corresponding file", id = repoId, commitSha = secondCommit.Sha, path = newFile.Path }));
             }
         }
 
@@ -63,8 +55,6 @@ public class NaiveEditorialDistanceAnalyzer : IAnalyzer
         var varyingResults = childrenComparisonResults.Where(result => result.Score > 0).ToList();
         var currentNodeCost = firstNode.GetType().Equals(secondNode.GetType()) ? 0 : 1;
 
-        _logger.LogDebug($"ProcessNonNull: {currentNodeCost}, {firstNode.GetType()}, {secondNode.GetType()}");
-
         return varyingResults.Count switch
         {
             > 1 => new ComparisonResult(varyingResults.Sum((result) => result.Score) + currentNodeCost,
@@ -87,8 +77,6 @@ public class NaiveEditorialDistanceAnalyzer : IAnalyzer
             (not null, null) => new ComparisonResult(firstNode.CountAllSubChildren(), firstNode, null),
             (not null, not null) => ProcessNonNull(firstNode, secondNode),
         };
-        _logger.LogDebug(JsonSerializer.Serialize(new { message = "TED", node1 = firstNode?.GetText(), node2 = secondNode?.GetText(), result = result.ToString() }));
-
         return result;
     }
 }

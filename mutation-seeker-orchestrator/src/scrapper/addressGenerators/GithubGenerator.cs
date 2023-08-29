@@ -39,7 +39,17 @@ namespace mutation_seeker_orchestrator.src.scrapper.addressGenerators
 
         private readonly Dictionary<SupportedLanguages, string> _languageMapper = new()
         {
-            { SupportedLanguages.Cpp, HttpUtility.UrlEncode("C++") }
+            { SupportedLanguages.Cpp, HttpUtility.UrlEncode("C++") },
+            { SupportedLanguages.C, HttpUtility.UrlEncode("C") },
+            { SupportedLanguages.Csharp, HttpUtility.UrlEncode("C#") },
+            { SupportedLanguages.Java, HttpUtility.UrlEncode("Java") },
+            { SupportedLanguages.Js, HttpUtility.UrlEncode("JavaScript") },
+            { SupportedLanguages.Python, HttpUtility.UrlEncode("Python") },
+            { SupportedLanguages.Ruby, HttpUtility.UrlEncode("Ruby") },
+            { SupportedLanguages.Rust, HttpUtility.UrlEncode("Rust") },
+            { SupportedLanguages.Scala, HttpUtility.UrlEncode("Scala") },
+            { SupportedLanguages.Ts, HttpUtility.UrlEncode("TypeScript") },
+
         };
 
         private readonly string _baseEndpoint = "https://api.github.com/search/repositories";
@@ -70,7 +80,7 @@ namespace mutation_seeker_orchestrator.src.scrapper.addressGenerators
                 }
                 else
                 {
-                    _logger.LogCritical("Error while getting data from github", new object[] { response });
+                    _logger.LogCritical("Error while getting data from github. {@resp}", response);
                     yield break;
                 }
             }

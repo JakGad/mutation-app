@@ -3,11 +3,11 @@ namespace Utils.environment
 
     public class EnvReader<T> where T : new()
     {
-        public T Variables { get; } = new T();
+        public T Variables { get; } = new ();
 
         private static string ToSnakeCase(string str)
         {
-            return string.Concat(str.Select((x, i) => i > 0 && char.IsUpper(x) ? "_" + x.ToString() : x.ToString()))
+            return string.Concat(str.Select((x, i) => i > 0 && char.IsUpper(x) ? "_" + x : x.ToString()))
                 .ToUpper();
         }
 
@@ -18,8 +18,6 @@ namespace Utils.environment
             {
                 throw new Exception($"{variableName} is undefined");
             }
-
-            Console.WriteLine($"{variableName}: {variableValue}");
 
             return variableValue;
         }

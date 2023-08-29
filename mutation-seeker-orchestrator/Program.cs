@@ -16,6 +16,7 @@ app.MapPut("/register-progress", async (HttpRequest req) =>
     {
         var requestBodyString = new StreamReader(req.Body).ReadToEndAsync();
         var progressStatus = JsonSerializer.Deserialize<StatusReportDTO>(await requestBodyString);
+        logger.LogInformation("Received {@body} on {@endpoint}", progressStatus, "/register-progress");
         return progressStatus switch
         {
             RepoCompartisonResultDTO result => SaveResult(result),
@@ -45,7 +46,6 @@ IResult ComparisonStarted(RepoComparisonStartedDTO info)
 
 IResult UnknownEntity()
 {
-    logger.LogError("Unprocessable entity");
     return Results.UnprocessableEntity();
 }
 

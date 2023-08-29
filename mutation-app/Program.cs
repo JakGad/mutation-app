@@ -1,9 +1,19 @@
-﻿using mutation_app.src;
+﻿using System.Net;
+using System.Net.Sockets;
+using System.Reflection;
+using Microsoft.Extensions.Logging;
+using mutation_app.src;
+using mutation_app.src.Monitoring;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-const string serviceName = "mutation-seeker";
-const string serviceVersion = "1.0.0";
+var containerId = Dns.GetHostName();
+var appDetails = new
+{
+    version = Assembly.GetExecutingAssembly().GetName().Version,
+    containerId,
+    ip = Dns.GetHostEntry(containerId).AddressList.FirstOrDefault(x => x.AddressFamily == AddressFamily.InterNetwork)
+};
 
 ManualResetEventSlim waitHandle = new ManualResetEventSlim(false);
 
@@ -25,5 +35,7 @@ MessageAnalyzer analyzer = new MessageAnalyzer(channel);
 
 consumer.Received += analyzer.ProcessMessage;
 channel.BasicConsume(queue: "seeker-tasks", autoAck: false, consumer: consumer);
+
+Logger.GetLogger().LogInformation("App {appDetails} started", appDetails);
 
 waitHandle.Wait();

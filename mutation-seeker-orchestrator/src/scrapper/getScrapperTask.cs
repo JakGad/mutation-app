@@ -14,7 +14,7 @@ namespace mutation_seeker_orchestrator.src.scrapper
         private const int MaxMessages = 32;
         private static ILogger _logger = Logger.GetLogger();
         private static EnvironmentVariables _environment = EnvironmentVariables.GetEnvs();
-        static async void RunScrapping()
+        private static async void RunScrapping()
         {
             
             var envVariables = EnvironmentVariables.GetEnvs();
@@ -37,20 +37,25 @@ namespace mutation_seeker_orchestrator.src.scrapper
 
             ScrapperStatus.UrlAnalyzeStartedEvent += _ => blocker.CheckAndUnlock();
             
-            var addresses = AddressFactory.GetAddressGenerator(SupportedGitPages.Github); 
-            var addressIterator = addresses.GetAddresses(SupportedLanguages.Cpp).GetAsyncEnumerator();
-
-            while(await addressIterator.MoveNextAsync())
+            var supportedLanguages = Enum.GetValues<SupportedLanguages>();
+            var addresses = AddressFactory.GetAddressGenerator(SupportedGitPages.Github);
+            foreach (var language in supportedLanguages)
             {
-                await blocker.Wait();
-                var message = new AnalyzeTask() { Url = addressIterator.Current, MaxMetricDifference = _environment.DefaultMaxMetric};
-                var body = JsonSerializer.SerializeToUtf8Bytes<SeekerTask>(message);
-                channel.BasicPublish(exchange: string.Empty,
-                    routingKey: "seeker-tasks",
-                    basicProperties: properties,
-                    body: body);
-                blocker.CheckAndLock();
-                _logger.LogInformation($"Analysing: {addressIterator.Current}");
+                var addressIterator = addresses.GetAddresses(language).GetAsyncEnumerator();
+
+                while (await addressIterator.MoveNextAsync())
+                {
+                    await blocker.Wait();
+                    var message = new AnalyzeTask()
+                        { Url = addressIterator.Current, MaxMetricDifference = _environment.DefaultMaxMetric };
+                    var body = JsonSerializer.SerializeToUtf8Bytes<SeekerTask>(message);
+                    channel.BasicPublish(exchange: string.Empty,
+                        routingKey: "seeker-tasks",
+                        basicProperties: properties,
+                        body: body);
+                    blocker.CheckAndLock();
+                    _logger.LogInformation("Pushing to queue: {@repo}", addressIterator.Current);
+                }
             }
         }
 
