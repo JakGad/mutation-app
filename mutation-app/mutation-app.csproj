@@ -16,9 +16,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Antlr4.Runtime.Standard" Version="4.12.0" />
+      <PackageReference Include="Antlr4.Runtime.Standard" Version="4.13.0" />
       <PackageReference Include="LibGit2Sharp" Version="0.27.2" />
-      <PackageReference Include="mutation-app.CommunicationTypes" Version="1.0.4" />
+      <PackageReference Include="mutation-app.CommunicationTypes" Version="1.0.5" />
       <PackageReference Include="mutation-app.Utils" Version="1.0.3" />
       <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.4.0" />
       <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.5.0-alpha.2" />

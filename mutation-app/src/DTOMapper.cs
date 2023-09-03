@@ -33,19 +33,8 @@ public class DTOMapper : IDTOMapper
         {
             CommitHash = objectToMapFrom.CommitHash,
             CommitParentHash = objectToMapFrom.ParentCommitHash,
-            FileResults = objectToMapFrom.FileResults.Select(MapFileResult).ToList(),
+            FileResults = objectToMapFrom.FileResults.Select(res => res.MapToDto()).ToList(),
             ScoreOverall = objectToMapFrom.MetricDifferenceBeforeLimiting
-        };
-    }
-
-    private FileComparisonResultDTO MapFileResult(ComparisonResult objectToMapFrom)
-    {
-        return new FileComparisonResultDTO()
-        {
-            Path = objectToMapFrom.FilePath,
-            Score = objectToMapFrom.Score,
-            OriginalTreeFragment = objectToMapFrom.NewSubtree.GetText(),
-            ParentTreeFragment = objectToMapFrom.OriginalSubtree.GetText(),
         };
     }
 }

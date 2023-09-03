@@ -13,12 +13,15 @@ public class Logger
     {
         if (_instance == null)
         {
+            var otel = 
+            
             _instance = LoggerFactory.Create(builder => builder.AddOpenTelemetry((opt) =>
             {
                 opt.IncludeFormattedMessage = true;
                 opt.IncludeScopes = true;
                 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
                 opt.AddOtlpExporter(options => { options.Endpoint = new Uri(_envVariables.OptlCollector); });
+                
             }).AddConsole().SetMinimumLevel(LogLevel.Information)).CreateLogger<Program>();
         }
 

@@ -67,12 +67,13 @@ public class MessageAnalyzer
         {
             ReportStart(task.Url);
             RepositoryFacade repo = new RepositoryFacade(task.Url);
-            var result = repo.Analyze(new NaiveEditorialDistanceAnalyzer());
-            var cleanedResult = LimitValuesInResult(result, task.MaxMetricDifference);
-            var json = JsonSerializer.Serialize(_dtoMapper.MapToDTO(cleanedResult));
+            var result = repo.Analyze(new NaiveEditorialDistanceAnalyzer(task.MaxMetricDifference));
+            // var cleanedResult = LimitValuesInResult(result, task.MaxMetricDifference);
+            var json = JsonSerializer.Serialize(_dtoMapper.MapToDTO(result));
             var dataToSend = new StringContent(json, Encoding.UTF8, "application/json");
 
             var response = await _httpClient.PutAsync(_responseAddress, dataToSend);
+            GC.Collect();
             if (!response.IsSuccessStatusCode)
             {
                 _logger.LogError("Unable to send response for {@url}. Status code: {@code}", task.Url, response.StatusCode);
@@ -87,10 +88,10 @@ public class MessageAnalyzer
     private RepoComparisonResult LimitValuesInResult(RepoComparisonResult dataToClean,
         int maxFileMetricDifference)
     {
-        var cleanedResults = dataToClean.Results.AsParallel().Select(commitResult =>
+        var cleanedResults = dataToClean.Results.Select(commitResult =>
         {
             var newCommitComparison = new CommitComparisonResult(commitResult);
-            newCommitComparison.FileResults = commitResult.FileResults.AsParallel()
+            newCommitComparison.FileResults = commitResult.FileResults
                 .Where(fileResult => fileResult.Score <= maxFileMetricDifference).ToList();
 
             return newCommitComparison;

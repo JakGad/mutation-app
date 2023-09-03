@@ -13,7 +13,7 @@
         "QUEUE_PASSWORD": "mypassword",
         "QUEUE_PORT": "5672",
         "OPTL_COLLECTOR": "http://collector:4317",
-        "DEFAULT_MAX_METRIC": "300"
+        "DEFAULT_MAX_METRIC": "3000"
                 
       },
       "dotnetRunMessages": true,

@@ -35,11 +35,11 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-public abstract class Java9LexerBase : Lexer
+public abstract class JavaLexerBase : Lexer
 {
     private readonly ICharStream _input;
 
-    protected Java9LexerBase(ICharStream input, TextWriter output, TextWriter errorOutput)
+    protected JavaLexerBase(ICharStream input, TextWriter output, TextWriter errorOutput)
         : base(input, output, errorOutput) {
             _input = input;
     }

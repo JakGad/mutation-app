@@ -11,7 +11,6 @@ namespace mutation_seeker_orchestrator.src.dataStructures
         [BsonId]
         public string RepoUrl { get; set; }
         public List<CommitResult>? CommitResults { get; set; }
-        public string GeneratorName { get; set; }
 
         public RepoResult(RepoCompartisonResultDTO dto)
         {
@@ -25,7 +24,7 @@ namespace mutation_seeker_orchestrator.src.dataStructures
     {
         public string CommitHash { get; set; }
         public string CommitParentHash { get; set; }
-        public int ScoreOverall { get; set; }
+        public float ScoreOverall { get; set; }
 
         public List<FileResult> FileResults { get; set; }
 

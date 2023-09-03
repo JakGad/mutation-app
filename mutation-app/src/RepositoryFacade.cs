@@ -94,8 +94,11 @@ public class RepositoryFacade
             {
                 if (childCommit != null && (!commitsCache.ContainsKey(childCommit.Sha) || commitsCache[childCommit.Sha] != parentCommit.Sha))
                 {
-                    var result = analyzer.Compare(parentCommit, childCommit, _url);
-                    commitResults.Add(new CommitComparisonResult(childCommit.Sha, parentCommit.Sha, result));
+                    var result = analyzer.Compare(_repository, parentCommit, childCommit, _url);
+                    if (result != null)
+                    {
+                        commitResults.Add(new CommitComparisonResult(childCommit.Sha, parentCommit.Sha, result));
+                    }
                 }
 
                 childCommit = parentCommit;

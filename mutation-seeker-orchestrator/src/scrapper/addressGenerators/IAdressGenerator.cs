@@ -5,7 +5,8 @@ namespace mutation_seeker_orchestrator.src.scrapper.addressGenerators
 {
     public enum SupportedLanguages
     {
-        Csharp, C, Java, Cpp,  Js, Python, Ruby, Rust, Scala, Ts
+        C, Java
+        //, Cpp,  Js, Python, Ruby, Rust, Scala, Ts,Csharp
     }
     public abstract class AddressGenerator
     {

@@ -15,6 +15,8 @@ namespace mutation_seeker_orchestrator.src.scrapper.addressGenerators
         {
             [JsonPropertyName("clone_url")]
             public string? Url { get; set; }
+            [JsonPropertyName("size")]
+            public int? size { get; set; } 
         }
 
         [JsonPropertyName("items")]
@@ -39,17 +41,16 @@ namespace mutation_seeker_orchestrator.src.scrapper.addressGenerators
 
         private readonly Dictionary<SupportedLanguages, string> _languageMapper = new()
         {
-            { SupportedLanguages.Cpp, HttpUtility.UrlEncode("C++") },
             { SupportedLanguages.C, HttpUtility.UrlEncode("C") },
-            { SupportedLanguages.Csharp, HttpUtility.UrlEncode("C#") },
             { SupportedLanguages.Java, HttpUtility.UrlEncode("Java") },
-            { SupportedLanguages.Js, HttpUtility.UrlEncode("JavaScript") },
-            { SupportedLanguages.Python, HttpUtility.UrlEncode("Python") },
-            { SupportedLanguages.Ruby, HttpUtility.UrlEncode("Ruby") },
-            { SupportedLanguages.Rust, HttpUtility.UrlEncode("Rust") },
-            { SupportedLanguages.Scala, HttpUtility.UrlEncode("Scala") },
-            { SupportedLanguages.Ts, HttpUtility.UrlEncode("TypeScript") },
-
+            // { SupportedLanguages.Cpp, HttpUtility.UrlEncode("C++") },
+            // { SupportedLanguages.Csharp, HttpUtility.UrlEncode("C#") },
+            // { SupportedLanguages.Js, HttpUtility.UrlEncode("JavaScript") },
+            // { SupportedLanguages.Python, HttpUtility.UrlEncode("Python") },
+            // { SupportedLanguages.Ruby, HttpUtility.UrlEncode("Ruby") },
+            // { SupportedLanguages.Rust, HttpUtility.UrlEncode("Rust") },
+            // { SupportedLanguages.Scala, HttpUtility.UrlEncode("Scala") },
+            // { SupportedLanguages.Ts, HttpUtility.UrlEncode("TypeScript") },
         };
 
         private readonly string _baseEndpoint = "https://api.github.com/search/repositories";
@@ -73,7 +74,7 @@ namespace mutation_seeker_orchestrator.src.scrapper.addressGenerators
 
                     foreach (var repo in result.Items)
                     {
-                        if(repo.Url != null && !WasUrlAnalyzed(repo.Url)) yield return repo.Url;
+                        if(repo.Url != null && !WasUrlAnalyzed(repo.Url) && repo.size<1000) yield return repo.Url;
                     }
 
                     currentUrl = GetNextUrlFromHeader(response.Headers);

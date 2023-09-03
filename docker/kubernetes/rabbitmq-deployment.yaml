@@ -33,6 +33,9 @@ spec:
               value: myuser
           image: rabbitmq:3.11.13-management-alpine
           name: rabbitmq
+          volumeMounts:
+            - mountPath: /etc/rabbitmq
+              name: rabbitmq-config 
           ports:
             - containerPort: 5672
               hostPort: 5672
@@ -42,4 +45,11 @@ spec:
               protocol: TCP
           resources: {}
       restartPolicy: Always
+      volumes:
+        - name: rabbitmq-config
+          configMap: 
+            name: rabbitmq-config
+            items:
+              - key: rabbitmq.conf
+                path: rabbitmq.conf
 status: {}

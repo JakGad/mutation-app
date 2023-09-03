@@ -16,7 +16,7 @@
 
     <ItemGroup>
       <PackageReference Include="MongoDB.Driver" Version="2.20.0" />
-      <PackageReference Include="mutation-app.CommunicationTypes" Version="1.0.4" />
+      <PackageReference Include="mutation-app.CommunicationTypes" Version="1.0.5" />
       <PackageReference Include="mutation-app.Utils" Version="1.0.3" />
       <PackageReference Include="RabbitMQ.Client" Version="6.5.0" />
     </ItemGroup>

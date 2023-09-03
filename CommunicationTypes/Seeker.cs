@@ -48,7 +48,7 @@ public class CommitComparisonResultDTO
 {
     public string CommitHash { get; set; }
     public string CommitParentHash { get; set; }
-    public int ScoreOverall { get; set; }
+    public float ScoreOverall { get; set; }
 
     public List<FileComparisonResultDTO> FileResults { get; set; }
 }
@@ -58,6 +58,6 @@ public class FileComparisonResultDTO
 {
     public string Path { get; set; }
     public int Score { get; set; }
-    public string ParentTreeFragment { get; set; }
-    public string OriginalTreeFragment { get; set; }
+    public string? ParentTreeFragment { get; set; }
+    public string? OriginalTreeFragment { get; set; }
 }

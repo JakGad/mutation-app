@@ -1,4 +1,5 @@
 using Antlr4.Runtime.Tree;
+using CommunicationTypes;
 using LibGit2Sharp;
 
 namespace mutation_app.src;
@@ -20,10 +21,10 @@ public struct CommitComparisonResult
 {
     public string CommitHash;
     public string ParentCommitHash;
-    public List<ComparisonResult> FileResults;
-    public long MetricDifferenceBeforeLimiting;
+    public List<FinalComparisonResult> FileResults;
+    public float MetricDifferenceBeforeLimiting;
 
-    public CommitComparisonResult(string commitHash, string parentCommitHash, List<ComparisonResult> fileResults)
+    public CommitComparisonResult(string commitHash, string parentCommitHash, List<FinalComparisonResult> fileResults)
     {
         CommitHash = commitHash;
         ParentCommitHash = parentCommitHash;
@@ -39,7 +40,6 @@ public struct CommitComparisonResult
         MetricDifferenceBeforeLimiting = toCopy.MetricDifferenceBeforeLimiting;
     }
 }
-
 
 public struct ComparisonResult
 {
@@ -66,7 +66,47 @@ public struct ComparisonResult
     }
 }
 
+public class FinalComparisonResult
+{
+    public int Score;
+    public string FilePath;
+    public FinalComparisonResult(int score, string filePath)
+    {
+        Score = score;
+        FilePath = filePath;
+    }
+
+    public virtual FileComparisonResultDTO MapToDto()
+    {
+        return new FileComparisonResultDTO()
+        {
+            Score = this.Score,
+            Path = this.FilePath,
+        };
+    }
+    
+}
+
+public class FinalComparisonResultWithValues: FinalComparisonResult
+{
+    public readonly string OriginalSubtree;
+    public readonly string NewSubtree;
+    public FinalComparisonResultWithValues(int score, string filePath, string originalSubtree, string newSubtree): base(score, filePath)
+    {
+        OriginalSubtree = originalSubtree;
+        NewSubtree = newSubtree;
+    }
+
+    public override FileComparisonResultDTO MapToDto()
+    {
+        var partialMap = base.MapToDto();
+        partialMap.OriginalTreeFragment = OriginalSubtree;
+        partialMap.ParentTreeFragment = NewSubtree;
+        return partialMap;
+    }
+}
+
 public interface IAnalyzer
 {
-    public List<ComparisonResult> Compare(Commit commit1, Commit commit2, string repoId);
+    public List<FinalComparisonResult>? Compare(Repository repo, Commit commit1, Commit commit2, string repoId);
 }
