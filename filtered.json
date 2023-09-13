@@ -1,0 +1,2522 @@
+[
+  {
+    "parent": "*regs",
+    "original": "regs"
+  },
+  {
+    "parent": "tick_ascii[256]",
+    "original": "*tick_ascii"
+  },
+  {
+    "parent": "init_keyboard()",
+    "original": "init_timer(50)"
+  },
+  {
+    "parent": "*(int*)arg",
+    "original": "(intptr_t)arg"
+  },
+  {
+    "parent": "&client_sock",
+    "original": "(intptr_t)client_sock"
+  },
+  {
+    "parent": "(int)IKCP_WND_RCV",
+    "original": "IKCP_WND_RCV"
+  },
+  {
+    "parent": "_imax_(rcvwnd,256)",
+    "original": "rcvwnd"
+  },
+  {
+    "parent": "(int)size<(int)IKCP_OVERHEAD",
+    "original": "size<IKCP_OVERHEAD"
+  },
+  {
+    "parent": "kcp->interval",
+    "original": "1"
+  },
+  {
+    "parent": "1",
+    "original": "kcp->interval"
+  },
+  {
+    "parent": "-1",
+    "original": "0"
+  },
+  {
+    "parent": "0",
+    "original": "-1"
+  },
+  {
+    "parent": "*pc",
+    "original": "(*pc)"
+  },
+  {
+    "parent": "(char*)sp[1],*sp",
+    "original": "sp[1],(char*)*sp"
+  },
+  {
+    "parent": "a=*(char*)*sp++=a",
+    "original": "*(char*)*sp++=a=a<<24>>24"
+  },
+  {
+    "parent": "INT_PTRWINAPI",
+    "original": "longlongintWINAPI"
+  },
+  {
+    "parent": "0ULL",
+    "original": "(UINT64)NULL"
+  },
+  {
+    "parent": "size_t",
+    "original": "int"
+  },
+  {
+    "parent": "*fragment_size_message",
+    "original": "fragment_size_message[]"
+  },
+  {
+    "parent": "constchar",
+    "original": "char"
+  },
+  {
+    "parent": "0",
+    "original": "exe"
+  },
+  {
+    "parent": "DEVICE_VID",
+    "original": "pDeviceContext->HidVendorID"
+  },
+  {
+    "parent": "DEVICE_VID",
+    "original": "deviceContext->VendorID"
+  },
+  {
+    "parent": "return;",
+    "original": "{return;}"
+  },
+  {
+    "parent": "strlen(cmd)",
+    "original": "sizeof(cmd)"
+  },
+  {
+    "parent": "(char)c",
+    "original": "c"
+  },
+  {
+    "parent": "list_pointer->row-1",
+    "original": "list_pointer->row"
+  },
+  {
+    "parent": "*input=NULL",
+    "original": "*input"
+  },
+  {
+    "parent": "{beep();ret=getch();}",
+    "original": "ret=getch();"
+  },
+  {
+    "parent": "input,NULL",
+    "original": "input"
+  },
+  {
+    "parent": "display,\"123456\"",
+    "original": "display"
+  },
+  {
+    "parent": "bufferSize",
+    "original": "strlen(nmsprintBuffer)+1"
+  },
+  {
+    "parent": "longlongconst",
+    "original": "int"
+  },
+  {
+    "parent": "sizeof(CREC)*array_size",
+    "original": "sizeof(CREC)*array_size*num"
+  },
+  {
+    "parent": "vocab_size+1",
+    "original": "vocab_size"
+  },
+  {
+    "parent": "stack_var+2",
+    "original": "stack_var"
+  },
+  {
+    "parent": "(long)c",
+    "original": "c"
+  },
+  {
+    "parent": "dlsym(RTLD_NEXT,\"system\")",
+    "original": "system"
+  },
+  {
+    "parent": "stderr,\"Nice jump d00d\\n\"",
+    "original": "\"Nice jump d00d\""
+  },
+  {
+    "parent": "\"Nice jump d00d\"",
+    "original": "stderr,\"Nice jump d00d\\n\""
+  },
+  {
+    "parent": "2",
+    "original": "sizeof(long)*2"
+  },
+  {
+    "parent": "buffer,sizeof(buffer),stdin",
+    "original": "buffer"
+  },
+  {
+    "parent": "32",
+    "original": "4+4+8+2+2+4+sizeof(void*)"
+  },
+  {
+    "parent": "(size_t)(off+len)",
+    "original": "off+len"
+  },
+  {
+    "parent": "UF_MAX",
+    "original": "old_uf=UF_MAX"
+  },
+  {
+    "parent": "(HTTP_MAX_HEADER_SIZE)",
+    "original": "HTTP_MAX_HEADER_SIZE"
+  },
+  {
+    "parent": "IS_HEX(ch)||ch==':'||ch=='.'",
+    "original": "IS_HEX(ch)||ch==':'"
+  },
+  {
+    "parent": "method_strings,m,\"<unknown>\"",
+    "original": "m"
+  },
+  {
+    "parent": "staticenumstate",
+    "original": "staticinlineenumstate"
+  },
+  {
+    "parent": "{parser->upgrade=1;}",
+    "original": "parser->upgrade=1;"
+  },
+  {
+    "parent": "*p=data",
+    "original": "*p"
+  },
+  {
+    "parent": "main(void)",
+    "original": "main()"
+  },
+  {
+    "parent": "(uint64_t)(time*NSEC_PER_SEC)",
+    "original": "time*NSEC_PER_SEC"
+  },
+  {
+    "parent": "*end&&*end!='\\n'",
+    "original": "*end!='\\n'"
+  },
+  {
+    "parent": "ty=ty_double;",
+    "original": "caseLONG+DOUBLE:ty=ty_double;"
+  },
+  {
+    "parent": "fn->has_varargs?56:0",
+    "original": "0"
+  },
+  {
+    "parent": "\"==\",\"!=\",\"<=\",\">=\",\"->\"",
+    "original": "\"==\",\"!=\",\"<=\",\">=\""
+  },
+  {
+    "parent": "prog->fns",
+    "original": "prog"
+  },
+  {
+    "parent": "node->tok,\"not an lvalue\"",
+    "original": "\"not an lvalue\""
+  },
+  {
+    "parent": "vl->var->offset",
+    "original": "var->offset"
+  },
+  {
+    "parent": "\"return\",\"if\",\"else\",\"while\"",
+    "original": "\"return\",\"if\",\"else\""
+  },
+  {
+    "parent": "int",
+    "original": "staticint"
+  },
+  {
+    "parent": "\"return\",\"if\",\"else\"",
+    "original": "\"return\",\"if\",\"else\",\"while\""
+  },
+  {
+    "parent": "var->offset",
+    "original": "vl->var->offset"
+  },
+  {
+    "parent": "\"not an lvalue\"",
+    "original": "node->tok,\"not an lvalue\""
+  },
+  {
+    "parent": "\"==\",\"!=\",\"<=\",\">=\"",
+    "original": "\"==\",\"!=\",\"<=\",\">=\",\"->\""
+  },
+  {
+    "parent": "var->ty",
+    "original": "var->ty,var->tok"
+  },
+  {
+    "parent": "var->ty,var->tok",
+    "original": "var->ty"
+  },
+  {
+    "parent": "PyObject*loop=NULL;",
+    "original": "PyObject*loop;"
+  },
+  {
+    "parent": "route",
+    "original": "route==Py_None"
+  },
+  {
+    "parent": "self->buffer_capacity",
+    "original": "2048"
+  },
+  {
+    "parent": "sm,s_fd,NULL,my_sm,true",
+    "original": "sm,s_fd,my_sm,true"
+  },
+  {
+    "parent": "staticconstchar",
+    "original": "staticchar"
+  },
+  {
+    "parent": "staticchar",
+    "original": "staticconstchar"
+  },
+  {
+    "parent": "(ch=*s++)",
+    "original": "ch=*s++"
+  },
+  {
+    "parent": "wi_new(false)",
+    "original": "wi_new()"
+  },
+  {
+    "parent": "wi_new()",
+    "original": "wi_new(false)"
+  },
+  {
+    "parent": "self->remove_fd(self,fd);",
+    "original": "return-errno;"
+  },
+  {
+    "parent": "return-errno;",
+    "original": "self->remove_fd(self,fd);"
+  },
+  {
+    "parent": "returnret;",
+    "original": "return;"
+  },
+  {
+    "parent": "return;",
+    "original": "returnret;"
+  },
+  {
+    "parent": "unsignedint",
+    "original": "socklen_t"
+  },
+  {
+    "parent": "socklen_t",
+    "original": "unsignedint"
+  },
+  {
+    "parent": "funcptr",
+    "original": "(*funcptr)"
+  },
+  {
+    "parent": "ntohl(p_addr_in->s_addr)>>24",
+    "original": "(p_addr_in->s_addr&0xff)"
+  },
+  {
+    "parent": "pd[count].ip.as_int",
+    "original": "(int)pd[count].ip.as_int"
+  },
+  {
+    "parent": "0xFF",
+    "original": "(char)0xFF"
+  },
+  {
+    "parent": "returnEXIT_SUCCESS;",
+    "original": "break;"
+  },
+  {
+    "parent": "!localnet_addr[i].port",
+    "original": "localnet_addr[i].port"
+  },
+  {
+    "parent": "intcpu",
+    "original": "int"
+  },
+  {
+    "parent": "amdgpu_count",
+    "original": "*count"
+  },
+  {
+    "parent": "!line||strlen(line)==0",
+    "original": "strlen(line)==0||line[0]=='#'"
+  },
+  {
+    "parent": "(int)(length-cols)",
+    "original": "length-cols"
+  },
+  {
+    "parent": "num_devices",
+    "original": "dwin->num_devices"
+  },
+  {
+    "parent": "infos->cpu_elapsed_time>-1.",
+    "original": "infos->cpu_elapsed_time!=-1."
+  },
+  {
+    "parent": "intstate=0;",
+    "original": "intstate;"
+  },
+  {
+    "parent": "child_addr_tscratch=0;",
+    "original": "child_addr_tscratch;"
+  },
+  {
+    "parent": "sizeof(*tmp)",
+    "original": "sizeof*tmp"
+  },
+  {
+    "parent": "fds,allocated,sizeof*tmp",
+    "original": "fds,allocated*sizeof*tmp"
+  },
+  {
+    "parent": "i<3&&err",
+    "original": "i<3"
+  },
+  {
+    "parent": "err<0?-err:err",
+    "original": "err"
+  },
+  {
+    "parent": "constvoid",
+    "original": "void"
+  },
+  {
+    "parent": "(unsigned)child_status.ctty",
+    "original": "child_status.ctty"
+  },
+  {
+    "parent": "rebindings_head",
+    "original": "rebindings_head->rebindings"
+  },
+  {
+    "parent": "!line||stop>slide->stop",
+    "original": "!line"
+  },
+  {
+    "parent": "0",
+    "original": "line->offset"
+  },
+  {
+    "parent": "x->stop=0",
+    "original": "0"
+  },
+  {
+    "parent": "!slide->line||!line",
+    "original": "!slide->line"
+  },
+  {
+    "parent": "strchr(i,')')",
+    "original": "strchr(i,')')+1"
+  },
+  {
+    "parent": "(line->text->delete)",
+    "original": "cstring_delete"
+  },
+  {
+    "parent": "(text->delete)",
+    "original": "cstring_delete"
+  },
+  {
+    "parent": "self->size-pos-len+1",
+    "original": "self->size-pos"
+  },
+  {
+    "parent": "(int)i[1]",
+    "original": "*(i+1)"
+  },
+  {
+    "parent": "EXIT_SUCCESS",
+    "original": "(EXIT_SUCCESS)"
+  },
+  {
+    "parent": "NULL",
+    "original": "(void*)0"
+  },
+  {
+    "parent": "(void*)0",
+    "original": "NULL"
+  },
+  {
+    "parent": "is_utf8(ch)",
+    "original": "ch&0x80"
+  },
+  {
+    "parent": "line_t*line=NULL;",
+    "original": "line_t*line;"
+  },
+  {
+    "parent": "(i+3)",
+    "original": "i"
+  },
+  {
+    "parent": "x->offset=0",
+    "original": "0"
+  },
+  {
+    "parent": "(void*)0",
+    "original": "x->author=x->date=(void*)0"
+  },
+  {
+    "parent": "(void*)latest_tag",
+    "original": "latest_tag"
+  },
+  {
+    "parent": "(void*)latest_version",
+    "original": "latest_version"
+  },
+  {
+    "parent": "opts.dir",
+    "original": "dir"
+  },
+  {
+    "parent": "!opts.global",
+    "original": "!opts.global&&NULL!=pkg->src"
+  },
+  {
+    "parent": "list_new(void)",
+    "original": "list_new()"
+  },
+  {
+    "parent": "CLIB_SEARCH_CACHE_TIME",
+    "original": "15*24*60*60"
+  },
+  {
+    "parent": "(unsigned)index",
+    "original": "index"
+  },
+  {
+    "parent": "http_get_free(res);",
+    "original": "if(res)http_get_free(res);"
+  },
+  {
+    "parent": "conf.run",
+    "original": "conf.run&&1"
+  },
+  {
+    "parent": "conf.metadata_timeout",
+    "original": "10"
+  },
+  {
+    "parent": "(constchar*)value",
+    "original": "value"
+  },
+  {
+    "parent": "(err=metadata->topics[0].err)",
+    "original": "metadata->topics[0].err"
+  },
+  {
+    "parent": "(domain_count==0?SM_NOQACK:0)",
+    "original": "SM_NOQACK"
+  },
+  {
+    "parent": "basic_type==ct_inbound",
+    "original": "LC"
+  },
+  {
+    "parent": "d->acc",
+    "original": "strm_int_value(d->acc)"
+  },
+  {
+    "parent": "strm_int_value(d->acc)",
+    "original": "d->acc"
+  },
+  {
+    "parent": "NULL,\"array\"",
+    "original": "NULL"
+  },
+  {
+    "parent": "NULL,\"number\"",
+    "original": "NULL"
+  },
+  {
+    "parent": "NULL,\"string\"",
+    "original": "NULL"
+  },
+  {
+    "parent": "NULL,\"time\"",
+    "original": "NULL"
+  },
+  {
+    "parent": "a",
+    "original": "strm_value_ary(v)"
+  },
+  {
+    "parent": "{done=1;break;}",
+    "original": "done=1;"
+  },
+  {
+    "parent": "strm_value_int(args[6])/1000",
+    "original": "strm_value_int(args[6])"
+  },
+  {
+    "parent": "strm->dst&&!strm_nil_p(data)",
+    "original": "!strm_nil_p(data)"
+  },
+  {
+    "parent": "count",
+    "original": "&d->count,1"
+  },
+  {
+    "parent": "&s->count,1",
+    "original": "count"
+  },
+  {
+    "parent": "double",
+    "original": "strm_int"
+  },
+  {
+    "parent": "n==STRM_OK&&strm_string_p(m)",
+    "original": "n==STRM_OK"
+  },
+  {
+    "parent": "strm_value_vptr(v)",
+    "original": "(void*)strm_value_val(v)"
+  },
+  {
+    "parent": "VAL_PTR(s)+1",
+    "original": "VAL_PTR(s)"
+  },
+  {
+    "parent": "strm_ptr_value(io)",
+    "original": "io"
+  },
+  {
+    "parent": "strm_int",
+    "original": "long"
+  },
+  {
+    "parent": "node_to_sym(v0->ns)",
+    "original": "NULL,node_to_sym(v0->ns)"
+  },
+  {
+    "parent": "strm_cfuncp",
+    "original": "void*p"
+  },
+  {
+    "parent": "io=(strm_io)v.val.p",
+    "original": "*io=(strm_io*)v.val.p"
+  },
+  {
+    "parent": "av",
+    "original": "*av"
+  },
+  {
+    "parent": "headers",
+    "original": "*headers"
+  },
+  {
+    "parent": "a=(strm_array)v.val.p",
+    "original": "*a=(strm_array*)v.val.p"
+  },
+  {
+    "parent": "p",
+    "original": "*p"
+  },
+  {
+    "parent": "cd->headers&&cd->types==NULL",
+    "original": "cd->headers"
+  },
+  {
+    "parent": "(int)*s",
+    "original": "*s"
+  },
+  {
+    "parent": "(int)*p",
+    "original": "*p"
+  },
+  {
+    "parent": "str",
+    "original": "str->ptr,str->len"
+  },
+  {
+    "parent": "!cd->headers&&!cd->types",
+    "original": "!cd->headers"
+  },
+  {
+    "parent": "staticvoid",
+    "original": "void"
+  },
+  {
+    "parent": "void",
+    "original": "staticvoid"
+  },
+  {
+    "parent": "BUFSIZ",
+    "original": "sizeof(b->buf)"
+  },
+  {
+    "parent": "\"ARGS(%d):\\n\",args->len",
+    "original": "\"ARGS:\\n\""
+  },
+  {
+    "parent": "socklen_t",
+    "original": "int"
+  },
+  {
+    "parent": "strm_seq_init(node_ctx*ctx)",
+    "original": "strm_seq_init()"
+  },
+  {
+    "parent": "rhs",
+    "original": "args[1]"
+  },
+  {
+    "parent": "(int)str->len",
+    "original": "str->len"
+  },
+  {
+    "parent": "node_ident_of(op)",
+    "original": "op"
+  },
+  {
+    "parent": "strm_string",
+    "original": "structstrm_string"
+  },
+  {
+    "parent": "strm_string*str;",
+    "original": "structstrm_string*str;"
+  },
+  {
+    "parent": "double",
+    "original": "strm_double"
+  },
+  {
+    "parent": "a&&a->type==STRM_OBJ_ARRAY",
+    "original": "a->type==STRM_OBJ_ARRAY"
+  },
+  {
+    "parent": "(void*)np->value.v.id",
+    "original": "np->value.v.id"
+  },
+  {
+    "parent": "structepoll_eventev={0};",
+    "original": "structepoll_eventev;"
+  },
+  {
+    "parent": "(strm_func)strm_close",
+    "original": "strm_close"
+  },
+  {
+    "parent": "strm_close",
+    "original": "(strm_func)strm_close"
+  },
+  {
+    "parent": "strncmp(msg,\"\",1)",
+    "original": "\"\""
+  },
+  {
+    "parent": "\"\"",
+    "original": "strncmp(msg,\"\",1)"
+  },
+  {
+    "parent": "*tty",
+    "original": "*tty=NULL"
+  },
+  {
+    "parent": "staticconstchar",
+    "original": "constchar"
+  },
+  {
+    "parent": "constchar",
+    "original": "staticconstchar"
+  },
+  {
+    "parent": "parser->toknext",
+    "original": "0"
+  },
+  {
+    "parent": "(test_failed>0)",
+    "original": "0"
+  },
+  {
+    "parent": "num_tokens",
+    "original": "(int)num_tokens"
+  },
+  {
+    "parent": "(int)num_tokens",
+    "original": "num_tokens"
+  },
+  {
+    "parent": "\"\\n\"",
+    "original": "\"\\n\",s"
+  },
+  {
+    "parent": "start+1",
+    "original": "start"
+  },
+  {
+    "parent": "strdup(arg)",
+    "original": "arg"
+  },
+  {
+    "parent": "-EINVAL",
+    "original": "EINVAL"
+  },
+  {
+    "parent": "uint64_twrctr=0;",
+    "original": "uint64_twrctr;"
+  },
+  {
+    "parent": "stbuf->st_mtime=mtime",
+    "original": "mtime"
+  },
+  {
+    "parent": "!err&&(stbuf->st_mode&S_IFMT)",
+    "original": "!err"
+  },
+  {
+    "parent": "dotdots*3+strlen(l)+2",
+    "original": "dotdots*3+l?strlen(l):1+10"
+  },
+  {
+    "parent": "sshfs.detect_uid",
+    "original": "detect_uid"
+  },
+  {
+    "parent": "staticinlinestructsshfs_file",
+    "original": "staticstructsshfs_file"
+  },
+  {
+    "parent": "strlen(comma+1)+1",
+    "original": "strlen(comma+1)"
+  },
+  {
+    "parent": "ctx->ncr",
+    "original": "ctx->cookies->nelts"
+  },
+  {
+    "parent": "ctx->cookies->nelts",
+    "original": "ctx->cookies->nelts>1"
+  },
+  {
+    "parent": "scaled",
+    "original": "scaled==2.0"
+  },
+  {
+    "parent": "(UUID_SIZE+1)*MIRROR_MAX+1",
+    "original": "UUID_SIZE*MIRROR_MAX"
+  },
+  {
+    "parent": "exit(1);",
+    "original": "return-1;"
+  },
+  {
+    "parent": "cnx->state",
+    "original": "cnx"
+  },
+  {
+    "parent": "{free(gap);returnNULL;}",
+    "original": "returnNULL;"
+  },
+  {
+    "parent": "len-1",
+    "original": "len"
+  },
+  {
+    "parent": "returnNULL;",
+    "original": "{free(gap);returnNULL;}"
+  },
+  {
+    "parent": "msg_info,\"%s\",str",
+    "original": "msg_info,str"
+  },
+  {
+    "parent": "fd_info.watchers->max_fd+1",
+    "original": "fd_info.watchers->max_fd"
+  },
+  {
+    "parent": "fd_info.watchers->max_fd",
+    "original": "fd_info.watchers->max_fd+1"
+  },
+  {
+    "parent": "cfg.udp_max_connections",
+    "original": "HASH_SIZE"
+  },
+  {
+    "parent": "sockfd[0]",
+    "original": "sockfd"
+  },
+  {
+    "parent": "cnx->proto->udp_timeout",
+    "original": "UDP_TIMEOUT"
+  },
+  {
+    "parent": "&cnx,in_socket,BLOCKING",
+    "original": "&cnx,in_socket"
+  },
+  {
+    "parent": "fd_info->collection,cnx",
+    "original": "cnx"
+  },
+  {
+    "parent": "i++",
+    "original": "++i"
+  },
+  {
+    "parent": "res==FD_CNXCLOSED",
+    "original": "!res"
+  },
+  {
+    "parent": "pid_t",
+    "original": "int"
+  },
+  {
+    "parent": "&listen_sockets",
+    "original": "&listen_sockets,addr_listen"
+  },
+  {
+    "parent": "res",
+    "original": "!res"
+  },
+  {
+    "parent": "sizeof(buffer)-prefix_len",
+    "original": "sizeof(buffer)"
+  },
+  {
+    "parent": "sizeof(buffer)",
+    "original": "sizeof(buffer)-prefix_len"
+  },
+  {
+    "parent": "stderr,\"%s\",ssl_err_msg",
+    "original": "stderr,ssl_err_msg"
+  },
+  {
+    "parent": "p->regex_patterns[i]",
+    "original": "pattern_list[i]"
+  },
+  {
+    "parent": "NULL",
+    "original": "get_first_protocol()"
+  },
+  {
+    "parent": "strlen(opt)",
+    "original": "len"
+  },
+  {
+    "parent": "*last_p=cnx->proto",
+    "original": "*last_p"
+  },
+  {
+    "parent": "facilitynames[fn].c_val",
+    "original": "fn"
+  },
+  {
+    "parent": "verbose>1",
+    "original": "verbose"
+  },
+  {
+    "parent": "*probe",
+    "original": "probe"
+  },
+  {
+    "parent": "!addr_listen&&!inetd",
+    "original": "!addr_listen"
+  },
+  {
+    "parent": "size_w==-1",
+    "original": "(size_w==-1)"
+  },
+  {
+    "parent": "(int*)&timeout",
+    "original": "&timeout"
+  },
+  {
+    "parent": "res=setuid(pw->pw_uid)",
+    "original": "setuid(pw->pw_uid)"
+  },
+  {
+    "parent": "inttimeout",
+    "original": "longinttimeout"
+  },
+  {
+    "parent": "addr,cnx->q[0].fd,cnx_name",
+    "original": "addr,cnx_name"
+  },
+  {
+    "parent": "unsignedinti",
+    "original": "uinti"
+  },
+  {
+    "parent": "\"dumb\",\"cons25\",\"emacs\",NULL",
+    "original": "\"dumb\",\"cons25\",NULL"
+  },
+  {
+    "parent": "\"dumb\",\"cons25\",NULL",
+    "original": "\"dumb\",\"cons25\",\"emacs\",NULL"
+  },
+  {
+    "parent": "l->buflen-1",
+    "original": "l->buflen"
+  },
+  {
+    "parent": "\"dumb\",\"cons25\",NULL",
+    "original": "\"dumb\",\"eterm\",\"cons25\",NULL"
+  },
+  {
+    "parent": "tvm_vm_create()",
+    "original": "tvm_vm_create(char*filename)"
+  },
+  {
+    "parent": "intinstr_place=0;",
+    "original": "intinstr_place;"
+  },
+  {
+    "parent": "&source",
+    "original": "source"
+  },
+  {
+    "parent": "structtvm_ctx",
+    "original": "tvm_t"
+  },
+  {
+    "parent": "lexer_ctx,source,&p->defines",
+    "original": "lexer_ctx,source"
+  },
+  {
+    "parent": "1,sizeof(tvm_t)",
+    "original": "sizeof(tvm_t)"
+  },
+  {
+    "parent": "fname_chars,sizeof(char)",
+    "original": "sizeof(char)*fname_chars"
+  },
+  {
+    "parent": "(size/sizeof(int32_t))",
+    "original": "size"
+  },
+  {
+    "parent": "1,sizeof(tvm_htable_node_t)",
+    "original": "sizeof(htable_node)"
+  },
+  {
+    "parent": "s->num_items*sizeof(int)",
+    "original": "s->num_items"
+  },
+  {
+    "parent": "(*arg0==*arg1)",
+    "original": "(*arg0==*arg1)<<32"
+  },
+  {
+    "parent": "vm->pProgram->start",
+    "original": "0"
+  },
+  {
+    "parent": "htab->nodes[hash]!=NULL",
+    "original": "htab->nodes[hash]"
+  },
+  {
+    "parent": "packetsize+ICMP_HDRLEN",
+    "original": "packetsize"
+  },
+  {
+    "parent": "net_inc_rx(len)",
+    "original": "c->host->rx_icmp++"
+  },
+  {
+    "parent": "if(!clen)return-EIO;",
+    "original": "if(clen<=0)returnclen;"
+  },
+  {
+    "parent": "&mypkt.payload",
+    "original": "mypkt.payload"
+  },
+  {
+    "parent": "uint8_t",
+    "original": "constuint8_t"
+  },
+  {
+    "parent": "sizeof(ipaddr)",
+    "original": "pkt->peer_len"
+  },
+  {
+    "parent": "structListNode",
+    "original": "staticstructListNode"
+  },
+  {
+    "parent": "char",
+    "original": "staticchar"
+  },
+  {
+    "parent": "structTreeNode",
+    "original": "staticstructTreeNode"
+  },
+  {
+    "parent": "INT_MIN",
+    "original": "-1"
+  },
+  {
+    "parent": "i+len-1",
+    "original": "i"
+  },
+  {
+    "parent": "numsSize-2",
+    "original": "numsSize"
+  },
+  {
+    "parent": "if(n==0){returnNULL;}",
+    "original": "if(n<1)returnNULL;"
+  },
+  {
+    "parent": "nums[nums[i]-1]!=nums[i]",
+    "original": "nums[i]!=nums[nums[i]-1]"
+  },
+  {
+    "parent": "{continue;}",
+    "original": "continue;"
+  },
+  {
+    "parent": "n/5+trailingZeroes(n/5)",
+    "original": "trailingZeroes(n/5)"
+  },
+  {
+    "parent": "l1!=NULL&&l2!=NULL",
+    "original": "l1!=NULL||l2!=NULL"
+  },
+  {
+    "parent": "staticbool",
+    "original": "bool"
+  },
+  {
+    "parent": "staticchar",
+    "original": "char"
+  },
+  {
+    "parent": "staticint",
+    "original": "int"
+  },
+  {
+    "parent": "staticinlinevoid",
+    "original": "staticvoid"
+  },
+  {
+    "parent": "staticdouble",
+    "original": "double"
+  },
+  {
+    "parent": "staticstructListNode",
+    "original": "structListNode"
+  },
+  {
+    "parent": "elem->index>i",
+    "original": "elem->index!=i"
+  },
+  {
+    "parent": "constint",
+    "original": "int"
+  },
+  {
+    "parent": "(KEYTIMEOUT*1000)",
+    "original": "500000"
+  },
+  {
+    "parent": "choices_t*c,options_t*options",
+    "original": "choices_t*c"
+  },
+  {
+    "parent": "&choices,&options",
+    "original": "&choices"
+  },
+  {
+    "parent": "score_t",
+    "original": "double"
+  },
+  {
+    "parent": "ICANON|ECHO|ISIG",
+    "original": "ICANON|ECHO"
+  },
+  {
+    "parent": "tty",
+    "original": "tty->fout"
+  },
+  {
+    "parent": "ch=='['||ch=='O'",
+    "original": "ch=='['"
+  },
+  {
+    "parent": "tty",
+    "original": "tty,0"
+  },
+  {
+    "parent": "col+1",
+    "original": "col"
+  },
+  {
+    "parent": "(j||i)",
+    "original": "j"
+  },
+  {
+    "parent": "j",
+    "original": "(j||i)"
+  },
+  {
+    "parent": "!last_ch||last_ch=='/'",
+    "original": "last_ch=='/'"
+  },
+  {
+    "parent": "1",
+    "original": "ch!='q'"
+  },
+  {
+    "parent": "current_selection+NUMLINES-1",
+    "original": "current_selection+9"
+  },
+  {
+    "parent": "bool",
+    "original": "staticbool"
+  },
+  {
+    "parent": "buff,-1",
+    "original": "buff"
+  },
+  {
+    "parent": "fmt,-1",
+    "original": "fmt"
+  },
+  {
+    "parent": "RED_INET_ADDRSTRLEN",
+    "original": "sizeof(placeholder)"
+  },
+  {
+    "parent": "section->context,\"%s\",err",
+    "original": "section->context,err"
+  },
+  {
+    "parent": "f",
+    "original": "f,NULL"
+  },
+  {
+    "parent": "e->key",
+    "original": "e"
+  },
+  {
+    "parent": "EVBUFFER_DATA(buff)",
+    "original": "buff->buffer"
+  },
+  {
+    "parent": "EVBUFFER_DATA(fmt)",
+    "original": "fmt->buffer"
+  },
+  {
+    "parent": "qop",
+    "original": "!qop"
+  },
+  {
+    "parent": "(constchar*)buff->buffer",
+    "original": "buff->buffer"
+  },
+  {
+    "parent": "buff->buffer",
+    "original": "(constchar*)buff->buffer"
+  },
+  {
+    "parent": "{(*iter)++;break;}",
+    "original": "break;"
+  },
+  {
+    "parent": "rnnoise_create(NULL)",
+    "original": "rnnoise_create()"
+  },
+  {
+    "parent": "2821",
+    "original": "101*300"
+  },
+  {
+    "parent": "gf[FREQ_SIZE]={1}",
+    "original": "gf[FREQ_SIZE]"
+  },
+  {
+    "parent": "*addr",
+    "original": "addr"
+  },
+  {
+    "parent": "rec.name",
+    "original": "packet.head.question.name"
+  },
+  {
+    "parent": "line_len-1",
+    "original": "line_len"
+  },
+  {
+    "parent": "context,packet,&ns",
+    "original": "context,packet"
+  },
+  {
+    "parent": "list",
+    "original": "list->first"
+  },
+  {
+    "parent": "break;",
+    "original": "left=right=index;break;"
+  },
+  {
+    "parent": "index",
+    "original": "(index>0)?index-1:0"
+  },
+  {
+    "parent": "{returnNULL;}",
+    "original": "{}"
+  },
+  {
+    "parent": "(unsignedlong)location",
+    "original": "location"
+  },
+  {
+    "parent": "NUM_TEST_VALUES-1",
+    "original": "999"
+  },
+  {
+    "parent": "1",
+    "original": "100*sizeof(void*)"
+  },
+  {
+    "parent": "1",
+    "original": "16*sizeof(void*)"
+  },
+  {
+    "parent": "1",
+    "original": "sizeof(void*)*4"
+  },
+  {
+    "parent": "1",
+    "original": "8*sizeof(void*)"
+  },
+  {
+    "parent": "5",
+    "original": "5*258*sizeof(void*)"
+  },
+  {
+    "parent": "staticAVLTreeNodeSide",
+    "original": "AVLTreeNodeSide"
+  },
+  {
+    "parent": "(index-1)",
+    "original": "index"
+  },
+  {
+    "parent": "length*sizeof(void*)",
+    "original": "length,sizeof(void*)"
+  },
+  {
+    "parent": "sizeof(void*)*tree->num_nodes",
+    "original": "sizeof(void*),tree->num_nodes"
+  },
+  {
+    "parent": "sizeof(void*)*listlen",
+    "original": "sizeof(void*),listlen"
+  },
+  {
+    "parent": "(ctx->last_rect=res)",
+    "original": "res"
+  },
+  {
+    "parent": "ctx,0,e.wheel.y*-30",
+    "original": "ctx,e.wheel.y"
+  },
+  {
+    "parent": "\"(iii)\",1,3,1",
+    "original": "\"(ii)\",1,3"
+  },
+  {
+    "parent": "request->current_chunk_p==0",
+    "original": "!request->current_chunk_p"
+  },
+  {
+    "parent": "initbjoern(void)",
+    "original": "initbjoern()"
+  },
+  {
+    "parent": "_init_filewrapper(void)",
+    "original": "_init_filewrapper()"
+  },
+  {
+    "parent": "cleanup(void)",
+    "original": "cleanup()"
+  },
+  {
+    "parent": "initbjoern()",
+    "original": "initbjoern(void)"
+  },
+  {
+    "parent": "_init_filewrapper()",
+    "original": "_init_filewrapper(void)"
+  },
+  {
+    "parent": "cleanup()",
+    "original": "cleanup(void)"
+  },
+  {
+    "parent": "FileWrapper_New",
+    "original": "(newfunc)FileWrapper_New"
+  },
+  {
+    "parent": "(newfunc)FileWrapper_New",
+    "original": "FileWrapper_New"
+  },
+  {
+    "parent": "(unsignedint)chunklen",
+    "original": "chunklen"
+  },
+  {
+    "parent": "exc_info&&exc_info!=Py_None",
+    "original": "exc_info"
+  },
+  {
+    "parent": "\"(ii)\",1,2",
+    "original": "\"(iii)\",1,1,1"
+  },
+  {
+    "parent": "\"(iii)\",1,1,1",
+    "original": "\"(ii)\",1,1"
+  },
+  {
+    "parent": "len--",
+    "original": "--len"
+  },
+  {
+    "parent": "PyObject*bloedmann;",
+    "original": "constchar*bloedmann;"
+  },
+  {
+    "parent": "(PyObject*)transaction->body",
+    "original": "transaction->body"
+  },
+  {
+    "parent": "&parser_settings",
+    "original": "parser_settings"
+  },
+  {
+    "parent": ";",
+    "original": "DO_NOTHING;"
+  },
+  {
+    "parent": "-sockfd",
+    "original": "sockfd"
+  },
+  {
+    "parent": "{close(fd);continue;}",
+    "original": "continue;"
+  },
+  {
+    "parent": "!tflag&&!wflag&&argc<=optind",
+    "original": "argc<=optind"
+  },
+  {
+    "parent": "O_RDONLY|O_DIRECTORY",
+    "original": "O_RDONLY"
+  },
+  {
+    "parent": "(int64_t)started.tv_sec",
+    "original": "started.tv_sec"
+  },
+  {
+    "parent": "argc<=1||(wflag&&argc!=2)",
+    "original": "argc<=1"
+  },
+  {
+    "parent": "iter->next",
+    "original": "iter&&iter->next"
+  },
+  {
+    "parent": "ptr[1]?&ptr[1]:NULL",
+    "original": "ptr+1"
+  },
+  {
+    "parent": "ARGV[0]",
+    "original": "0"
+  },
+  {
+    "parent": "name+strlen(name)-5",
+    "original": "name-5"
+  },
+  {
+    "parent": "name-5",
+    "original": "name+strlen(name)-5"
+  },
+  {
+    "parent": "lf==start&&!field",
+    "original": "lf==start"
+  },
+  {
+    "parent": "lf==start",
+    "original": "!lf||lf==start"
+  },
+  {
+    "parent": "&buf",
+    "original": "&buf,0,sizeof(buf)"
+  },
+  {
+    "parent": "!str||!strlen(str)",
+    "original": "!strlen(str)"
+  },
+  {
+    "parent": "len>=2&&i<len-2",
+    "original": "i<len-2"
+  },
+  {
+    "parent": "size_t",
+    "original": "staticsize_t"
+  },
+  {
+    "parent": "chars[]",
+    "original": "*chars"
+  },
+  {
+    "parent": "*fp=NULL",
+    "original": "*fp"
+  },
+  {
+    "parent": "\"mkstemp(%s)\",tempname",
+    "original": "\"mkstemp\""
+  },
+  {
+    "parent": "note_type!=NOTE_TYPE_NONE",
+    "original": "note_type"
+  },
+  {
+    "parent": "*app=NULL",
+    "original": "*app"
+  },
+  {
+    "parent": "conststructaccount",
+    "original": "structaccount"
+  },
+  {
+    "parent": "item.data",
+    "original": "(char*)item.data"
+  },
+  {
+    "parent": "char",
+    "original": "_cleanup_free_char"
+  },
+  {
+    "parent": "!value||!strlen(value)",
+    "original": "!strlen(value)"
+  },
+  {
+    "parent": "{account->share=NULL;return;}",
+    "original": "return;"
+  },
+  {
+    "parent": "ACCOUNT_NAME|ACCOUNT_ID",
+    "original": "ACCOUNT_NAME"
+  },
+  {
+    "parent": "DWORDidx=0;",
+    "original": "DWORDidx;"
+  },
+  {
+    "parent": "LPCSTRname",
+    "original": "constchar*name"
+  },
+  {
+    "parent": "size",
+    "original": "section->SizeOfRawData"
+  },
+  {
+    "parent": "data_page",
+    "original": "(unsignedlong)data_page"
+  },
+  {
+    "parent": "1,sizeof(chunk_t)",
+    "original": "sizeof(chunk_t)"
+  },
+  {
+    "parent": "-1",
+    "original": "(char)-1"
+  },
+  {
+    "parent": "hk->command,hk->sync",
+    "original": "hk->command"
+  },
+  {
+    "parent": "(char)-1",
+    "original": "-1"
+  },
+  {
+    "parent": "2*MAXLEN",
+    "original": "MAXLEN"
+  },
+  {
+    "parent": "chained&&!locked&&timeout>0",
+    "original": "chained&&timeout>0"
+  },
+  {
+    "parent": "{free(chord);break;}",
+    "original": "break;"
+  },
+  {
+    "parent": "~buttonfield&1&&button<5",
+    "original": "~buttonfield&1"
+  },
+  {
+    "parent": "~lockfield&MOD_STATE_FIELD",
+    "original": "~lockfield"
+  },
+  {
+    "parent": "mon_start=mon_next;continue;",
+    "original": "continue;"
+  },
+  {
+    "parent": "continue;",
+    "original": "mon_start=mon_next;continue;"
+  },
+  {
+    "parent": "size_tcount=0;",
+    "original": "size_tcount;"
+  },
+  {
+    "parent": "size_tcount;",
+    "original": "size_tcount=0;"
+  },
+  {
+    "parent": "mpd_del(merge);returntrue;",
+    "original": "returntrue;"
+  },
+  {
+    "parent": "order1->id>order2->id?-1:1",
+    "original": "1"
+  },
+  {
+    "parent": "order_list",
+    "original": "order_list,LIST_START_HEAD"
+  },
+  {
+    "parent": "mysql_errno(conn)",
+    "original": "ret"
+  },
+  {
+    "parent": "ret<0&&info->ses->id!=0",
+    "original": "ret<0"
+  },
+  {
+    "parent": "ret!=0&&ret!=1062",
+    "original": "ret!=0||ret!=1062"
+  },
+  {
+    "parent": "ret!=0||ret!=1062",
+    "original": "ret!=0"
+  },
+  {
+    "parent": "dict_add(dt,key,val)==NULL",
+    "original": "dict_add(dt,key,val)<0"
+  },
+  {
+    "parent": "0x7f",
+    "original": "0x7f>>1"
+  },
+  {
+    "parent": "0",
+    "original": "-__LINE__"
+  },
+  {
+    "parent": "response->headers==NULL",
+    "original": "response->headers"
+  },
+  {
+    "parent": "end<=0||start<end",
+    "original": "start<=0"
+  },
+  {
+    "parent": "86400*7",
+    "original": "86400"
+  },
+  {
+    "parent": "amount",
+    "original": "order->amount"
+  },
+  {
+    "parent": "json_array_size(obj)<11",
+    "original": "json_array_size(obj)!=10"
+  },
+  {
+    "parent": "settings.history_thread",
+    "original": "20"
+  },
+  {
+    "parent": "1024*1024",
+    "original": "10240"
+  },
+  {
+    "parent": "constvoid*obj,constvoid*key",
+    "original": "void*obj,void*key"
+  },
+  {
+    "parent": "_",
+    "original": "1<_"
+  },
+  {
+    "parent": "!printf(\"%i|\",)",
+    "original": "printf(\"%i|\",)<0"
+  },
+  {
+    "parent": "S->cap",
+    "original": "2"
+  },
+  {
+    "parent": "tsk->inflight==0",
+    "original": "tsk->inflight<3"
+  },
+  {
+    "parent": "skb->seq>0&&skb->end_seq<=una",
+    "original": "skb->end_seq<=una"
+  },
+  {
+    "parent": "tick+=10",
+    "original": "tick++"
+  },
+  {
+    "parent": "th->sock",
+    "original": "datasock"
+  },
+  {
+    "parent": "(rlen>0?rlen:0)",
+    "original": "rlen"
+  },
+  {
+    "parent": "sk->err",
+    "original": "-EBADF"
+  },
+  {
+    "parent": "skb->dlen>1000",
+    "original": "skb->dlen==tsk->rmss"
+  },
+  {
+    "parent": "sock,\"\"",
+    "original": "sock"
+  },
+  {
+    "parent": "data->nfds",
+    "original": "rc"
+  },
+  {
+    "parent": "uint32_t",
+    "original": "int"
+  },
+  {
+    "parent": "(sk->recv_wait)",
+    "original": "sk->recv_wait"
+  },
+  {
+    "parent": "len<data->len",
+    "original": "data->len<0||len<data->len"
+  },
+  {
+    "parent": "thdr,sk,skb",
+    "original": "\"Output\",thdr"
+  },
+  {
+    "parent": "sock->ops->close(sock)",
+    "original": "free_socket(sock)"
+  },
+  {
+    "parent": "free_skb(skb);return-1;",
+    "original": "return-1;"
+  },
+  {
+    "parent": "tsk",
+    "original": "tsk->delack"
+  },
+  {
+    "parent": "return-1;",
+    "original": "free_skb(skb);return-1;"
+  },
+  {
+    "parent": "sk->err=0;return0;",
+    "original": "return0;"
+  },
+  {
+    "parent": "tsk->sk.err",
+    "original": "tsk->sk.sock->rc"
+  },
+  {
+    "parent": "&payload->addr",
+    "original": "payload->addr"
+  },
+  {
+    "parent": "len-1-rlen",
+    "original": "len-rlen"
+  },
+  {
+    "parent": "netdev_rx_loop",
+    "original": "&netdev_rx_loop"
+  },
+  {
+    "parent": "&netdev_rx_loop",
+    "original": "netdev_rx_loop"
+  },
+  {
+    "parent": "tsk",
+    "original": "tsk->rcv_buf"
+  },
+  {
+    "parent": "10000+(time(NULL)%3000)",
+    "original": "12000"
+  },
+  {
+    "parent": "(int)time(NULL)*rand()",
+    "original": "1525252"
+  },
+  {
+    "parent": "tsk",
+    "original": "tsk,th"
+  },
+  {
+    "parent": "argv[0],\"8000\",&addr",
+    "original": "argv[0],&addr"
+  },
+  {
+    "parent": "void",
+    "original": "constvoid"
+  },
+  {
+    "parent": "{sock->sk=sk;sk->sock=sock;}",
+    "original": "{}"
+  },
+  {
+    "parent": "htonl(sk->daddr)",
+    "original": "sk->daddr"
+  },
+  {
+    "parent": "NULL,skb",
+    "original": "skb"
+  },
+  {
+    "parent": "uint32_tdaddr",
+    "original": "uint32_tdaddr,uint32_tsaddr"
+  },
+  {
+    "parent": "htons(ETH_P_IP)",
+    "original": "ETH_P_IP"
+  },
+  {
+    "parent": "&main_rt",
+    "original": "NULL"
+  },
+  {
+    "parent": "netdev_queue_xmit(skb)",
+    "original": "0"
+  },
+  {
+    "parent": "neigh_resolve_output(skb)",
+    "original": "0"
+  },
+  {
+    "parent": "sk,skb",
+    "original": "skb"
+  },
+  {
+    "parent": "&argv[2]",
+    "original": "argv"
+  },
+  {
+    "parent": "icmp,icmp_len,0",
+    "original": "icmp,icmp_len"
+  },
+  {
+    "parent": "netdev,hdr",
+    "original": "\"Found IPv4\\n\""
+  },
+  {
+    "parent": "structnetdev*netdev",
+    "original": "inttun_fd"
+  },
+  {
+    "parent": "ifr",
+    "original": "&ifr,0,sizeof(ifr)"
+  },
+  {
+    "parent": "IFF_TAP|IFF_NO_PI",
+    "original": "IFF_TAP"
+  },
+  {
+    "parent": "sock->type",
+    "original": "sock->sk->protocol"
+  },
+  {
+    "parent": "tsk->sacklen",
+    "original": "4"
+  },
+  {
+    "parent": "argv[0],&addr",
+    "original": "argv[0],\"8000\",&addr"
+  },
+  {
+    "parent": "uint32_tdaddr,uint32_tsaddr",
+    "original": "uint32_tdaddr"
+  },
+  {
+    "parent": "ETH_P_IP",
+    "original": "htons(ETH_P_IP)"
+  },
+  {
+    "parent": "uint32_tdaddr,uint32_tsaddr",
+    "original": "uint32_tsaddr"
+  },
+  {
+    "parent": "uint32_tsaddr",
+    "original": "uint32_tdaddr,uint32_tsaddr"
+  },
+  {
+    "parent": "item",
+    "original": "json_string_value(item)"
+  },
+  {
+    "parent": "json_string_value(item)",
+    "original": "item"
+  },
+  {
+    "parent": "g_director_config->rx_drop_en",
+    "original": "1"
+  },
+  {
+    "parent": "use_correction==0",
+    "original": "use_correction"
+  },
+  {
+    "parent": "{fflush(stdout);return;}",
+    "original": "return;"
+  },
+  {
+    "parent": "pid,NULL,0",
+    "original": "NULL"
+  },
+  {
+    "parent": "UNUint",
+    "original": "int"
+  },
+  {
+    "parent": "FALSE",
+    "original": "-1"
+  },
+  {
+    "parent": "63",
+    "original": "(MAX_PINS-1)"
+  },
+  {
+    "parent": "(value)&0xFF",
+    "original": "(value<<4)&0xF0"
+  },
+  {
+    "parent": "(MAX_PINS-1)",
+    "original": "63"
+  },
+  {
+    "parent": "value",
+    "original": "value&0x3FF"
+  },
+  {
+    "parent": "value^0xFF",
+    "original": "~value"
+  },
+  {
+    "parent": "value&0x3FF",
+    "original": "value"
+  },
+  {
+    "parent": "int",
+    "original": "uint8_t"
+  },
+  {
+    "parent": "size_tl=0;",
+    "original": "size_tl;"
+  },
+  {
+    "parent": "structmap",
+    "original": "conststructmap"
+  },
+  {
+    "parent": "isalpha(*line)||*line=='_'",
+    "original": "isalnum(*line)"
+  },
+  {
+    "parent": "err&&err!=-EAGAIN",
+    "original": "err"
+  },
+  {
+    "parent": "int",
+    "original": "constint"
+  },
+  {
+    "parent": "sched_init(bar)",
+    "original": "sched_init()"
+  },
+  {
+    "parent": "*block->click.button!='\\0'",
+    "original": "block->click.button>0"
+  },
+  {
+    "parent": "size_t",
+    "original": "unsignedint"
+  },
+  {
+    "parent": "block->interval>0",
+    "original": "block->interval"
+  },
+  {
+    "parent": "conststructmap",
+    "original": "structmap"
+  },
+  {
+    "parent": "(uintptr_t)&out_fct_wrap",
+    "original": "&out_fct_wrap"
+  },
+  {
+    "parent": "p,precision",
+    "original": "p"
+  },
+  {
+    "parent": "((char*)buffer)",
+    "original": "buffer"
+  },
+  {
+    "parent": "sfx_music_rewind();return;",
+    "original": "return;"
+  },
+  {
+    "parent": "conststructdevice",
+    "original": "structdevice"
+  },
+  {
+    "parent": "staticunsignedint",
+    "original": "unsignedint"
+  },
+  {
+    "parent": "&shortp_out_mutex",
+    "original": "&shortp_out_sem,1"
+  },
+  {
+    "parent": "&scull_devices[i].lock",
+    "original": "&scull_devices[i].sem,1"
+  },
+  {
+    "parent": "&scull_p_devices[i].lock",
+    "original": "&scull_p_devices[i].sem,1"
+  },
+  {
+    "parent": "&scullc_devices[i].lock",
+    "original": "&scullc_devices[i].sem,1"
+  },
+  {
+    "parent": "&scull_devices[i].sem,1",
+    "original": "&scull_devices[i].lock"
+  },
+  {
+    "parent": "&scull_p_devices[i].sem,1",
+    "original": "&scull_p_devices[i].lock"
+  },
+  {
+    "parent": "&shortp_out_sem,1",
+    "original": "&shortp_out_mutex"
+  },
+  {
+    "parent": "(int*)&count",
+    "original": "&count"
+  },
+  {
+    "parent": "IRQF_SHARED",
+    "original": "IRQF_SHARED|IRQF_DISABLED"
+  },
+  {
+    "parent": "schedule();",
+    "original": "{schedule();}"
+  },
+  {
+    "parent": "&tiny->sem,1",
+    "original": "&tiny->sem"
+  },
+  {
+    "parent": "&tiny->sem",
+    "original": "&tiny->sem,1"
+  },
+  {
+    "parent": "&scull_p_devices[i].sem,1",
+    "original": "&scull_p_devices[i].sem"
+  },
+  {
+    "parent": "structwork_struct",
+    "original": "void"
+  },
+  {
+    "parent": "&dev->queue->kobj",
+    "original": "dev->queue"
+  },
+  {
+    "parent": "&scull_p_devices[i].sem",
+    "original": "&scull_p_devices[i].sem,1"
+  },
+  {
+    "parent": "void",
+    "original": "structwork_struct"
+  },
+  {
+    "parent": "port->state->port.tty",
+    "original": "port->state->tty"
+  },
+  {
+    "parent": "&priv->napi",
+    "original": "dev,&priv->napi"
+  },
+  {
+    "parent": "structrequest_queue",
+    "original": "request_queue_t"
+  },
+  {
+    "parent": "filp->f_path.dentry->d_inode",
+    "original": "filp->f_dentry->d_inode"
+  },
+  {
+    "parent": "dev_get_drvdata(ddev)",
+    "original": "ddev->driver_data"
+  },
+  {
+    "parent": "init_uts_ns.name.machine",
+    "original": "system_utsname.machine"
+  },
+  {
+    "parent": "system_utsname.machine",
+    "original": "init_uts_ns.name.machine"
+  },
+  {
+    "parent": "size-1",
+    "original": "size"
+  },
+  {
+    "parent": "*start",
+    "original": "*start&&*start!=';'"
+  },
+  {
+    "parent": "sizeof(CronTask*)",
+    "original": "sizeof(CronTask)"
+  },
+  {
+    "parent": "job->active",
+    "original": "true"
+  },
+  {
+    "parent": "true",
+    "original": "job->active"
+  },
+  {
+    "parent": "NextJobId(void)",
+    "original": "NextJobId()"
+  },
+  {
+    "parent": "be,move_ext,NULL,&summary",
+    "original": "be,move_ext,&summary"
+  },
+  {
+    "parent": "encoding_length",
+    "original": "encoding_length-1"
+  },
+  {
+    "parent": "tb_cell_buffer(void)",
+    "original": "tb_cell_buffer()"
+  },
+  {
+    "parent": "c|((y&1)?TB_UNDERLINE:0)",
+    "original": "c"
+  },
+  {
+    "parent": "if(r==0)continue;",
+    "original": "assert(r>0);"
+  },
+  {
+    "parent": "*s2==0",
+    "original": "true"
+  },
+  {
+    "parent": "&orig_tios",
+    "original": "0"
+  },
+  {
+    "parent": "0",
+    "original": "(uint32_t)buf[0]"
+  },
+  {
+    "parent": "structcrypt_data",
+    "original": "void"
+  },
+  {
+    "parent": "!value||!args.data",
+    "original": "!value"
+  },
+  {
+    "parent": "constunsignedchar",
+    "original": "unsignedchar"
+  },
+  {
+    "parent": "value",
+    "original": "data,size-1"
+  },
+  {
+    "parent": "data,size-1",
+    "original": "value"
+  },
+  {
+    "parent": "mBCrypt,\"Engine\",rb_cObject",
+    "original": "mBCrypt,\"Internals\""
+  },
+  {
+    "parent": "(u_int8_t*)RSTRING(seed)->ptr",
+    "original": "RSTRING(seed)->ptr"
+  },
+  {
+    "parent": "hole",
+    "original": "member->hole"
+  },
+  {
+    "parent": "*p!=target",
+    "original": "*p&&*p!=target"
+  },
+  {
+    "parent": "staticlistl;",
+    "original": "staticlistl={.head=NULL};"
+  },
+  {
+    "parent": "*p&&*p!=target",
+    "original": "*p!=target"
+  },
+  {
+    "parent": "rc<0&&geteuid()!=0",
+    "original": "rc<0"
+  },
+  {
+    "parent": "opt_level>0",
+    "original": "opt_level!=0"
+  },
+  {
+    "parent": "(int)(opt_delay*1000)",
+    "original": "opt_delay*1000"
+  },
+  {
+    "parent": "g_variant_type_new(\"a{sv}\")",
+    "original": "G_VARIANT_TYPE_VARIANT"
+  },
+  {
+    "parent": "result",
+    "original": "result||!select_all_players"
+  },
+  {
+    "parent": "gchar*bus_name=NULL;",
+    "original": "gchar*bus_name;"
+  },
+  {
+    "parent": "\"%s\",value",
+    "original": "value"
+  },
+  {
+    "parent": ";",
+    "original": "<missing ';'>"
+  },
+  {
+    "parent": "unsignedcharmask=0U;",
+    "original": "unsignedcharmask;"
+  },
+  {
+    "parent": "task",
+    "original": "(void*)task"
+  },
+  {
+    "parent": "*thread_p",
+    "original": "thread_p"
+  },
+  {
+    "parent": "(*func_buff)(void*)",
+    "original": "*(*func_buff)(void*arg)"
+  },
+  {
+    "parent": "PR_SET_NAME",
+    "original": "thread_p->pthread"
+  },
+  {
+    "parent": "returnNULL;",
+    "original": "pthread_exit(NULL);"
+  },
+  {
+    "parent": "staticbooldma=true;",
+    "original": "staticbooldma;"
+  },
+  {
+    "parent": "staticunsignedbuswidth=8;",
+    "original": "staticunsignedbuswidth;"
+  },
+  {
+    "parent": "vmem_size+2",
+    "original": "vmem_size"
+  },
+  {
+    "parent": "pdata->rotate",
+    "original": "pdata->rotate&3"
+  },
+  {
+    "parent": "width==0||height==0",
+    "original": "width==0&&height==0"
+  },
+  {
+    "parent": "(int)sizeof(node)",
+    "original": "sizeof(node)"
+  },
+  {
+    "parent": "stderr,\"Init failure!\\n\"",
+    "original": "\"Init failure!\\n\""
+  },
+  {
+    "parent": "ret=-1",
+    "original": "ret"
+  },
+  {
+    "parent": "tree->level-1",
+    "original": "tree->level"
+  },
+  {
+    "parent": "(DEGREE-1)",
+    "original": "DEGREE"
+  },
+  {
+    "parent": "intk;",
+    "original": "intk1,k2;"
+  },
+  {
+    "parent": "30*kMillisecondScale",
+    "original": "10"
+  },
+  {
+    "parent": "10",
+    "original": "30*kMillisecondScale"
+  },
+  {
+    "parent": "UInt32",
+    "original": "int"
+  },
+  {
+    "parent": "(start[i]=='\\t')?\"\\t\":\" \"",
+    "original": "\" \""
+  },
+  {
+    "parent": "caseND_CONTINUE:returnnode;",
+    "original": "returnnode;"
+  },
+  {
+    "parent": "var->ty->is_extern",
+    "original": "var->is_extern"
+  },
+  {
+    "parent": "node->ty->is_extern",
+    "original": "node->name"
+  },
+  {
+    "parent": "\"'while' expected\"",
+    "original": "format(\"'while' expected\",ty)"
+  },
+  {
+    "parent": "node->ty->offset",
+    "original": "node->offset"
+  },
+  {
+    "parent": "maybe_decay(node,decay)",
+    "original": "node"
+  },
+  {
+    "parent": "continuestothisline",
+    "original": "continues"
+  },
+  {
+    "parent": "caseND_BREAK:returnnode;",
+    "original": "returnnode;"
+  },
+  {
+    "parent": "t->len",
+    "original": "strlen(t->str)"
+  },
+  {
+    "parent": "strlen(t->str)",
+    "original": "t->len"
+  },
+  {
+    "parent": "members",
+    "original": "new_vec()"
+  },
+  {
+    "parent": "fn->stacksize",
+    "original": "roundup(fn->stacksize,16)"
+  },
+  {
+    "parent": "microphone_latency",
+    "original": "microphone_latency/4.0"
+  },
+  {
+    "parent": "enumSoundIoError",
+    "original": "int"
+  },
+  {
+    "parent": "int",
+    "original": "enumSoundIoError"
+  },
+  {
+    "parent": "structSoundIo*soundio",
+    "original": "void"
+  },
+  {
+    "parent": "(uint8_t)aptx_freq_cap.cap",
+    "original": "aptx_freq_cap.cap"
+  },
+  {
+    "parent": "(uint8_t)ldac_freq_cap.cap",
+    "original": "ldac_freq_cap.cap"
+  },
+  {
+    "parent": "(uint8_t)sbc_freq_cap.cap",
+    "original": "sbc_freq_cap.cap"
+  },
+  {
+    "parent": "(ssize_t)len",
+    "original": "0"
+  },
+  {
+    "parent": "1,\"%s\",yankargv[0]",
+    "original": "1,yankargv[0]"
+  },
+  {
+    "parent": "MAX(s2-s1,1)",
+    "original": "s2-s1"
+  },
+  {
+    "parent": "c",
+    "original": "c&0xFF"
+  },
+  {
+    "parent": "*s=='\\n'||*s=='\\r'||*s=='\\t'",
+    "original": "*s=='\\n'||*s=='\\t'"
+  },
+  {
+    "parent": "caseCONTROL('D'):return;",
+    "original": "return;"
+  },
+  {
+    "parent": "hv->hash",
+    "original": "1"
+  },
+  {
+    "parent": "value->len==0||matched",
+    "original": "value->len==0"
+  },
+  {
+    "parent": "(char*)key",
+    "original": "key"
+  },
+  {
+    "parent": "' '",
+    "original": "\" \"[0]"
+  },
+  {
+    "parent": "*input",
+    "original": "input[0]"
+  },
+  {
+    "parent": "8",
+    "original": "-8"
+  },
+  {
+    "parent": "(unsignedchar)c",
+    "original": "c"
+  },
+  {
+    "parent": "stream->frame_reader->error",
+    "original": "avro_strerror()"
+  },
+  {
+    "parent": "avro_strerror()",
+    "original": "stream->frame_reader->error"
+  },
+  {
+    "parent": "msg->err",
+    "original": "msg"
+  },
+  {
+    "parent": "rel",
+    "original": "rel,NULL"
+  },
+  {
+    "parent": "rel,NULL",
+    "original": "rel"
+  },
+  {
+    "parent": "VARSIZE(json)-VARHDRSZ+1",
+    "original": "VARSIZE(json)-VARHDRSZ"
+  },
+  {
+    "parent": "staticutf8_int8_t",
+    "original": "utf8_int8_t"
+  },
+  {
+    "parent": "size_t",
+    "original": "unsigned"
+  },
+  {
+    "parent": "(void*)0",
+    "original": "0"
+  },
+  {
+    "parent": "sizeof(result)+outputDataSize",
+    "original": "sizeof(result)"
+  },
+  {
+    "parent": "entry2",
+    "original": "!entry2"
+  },
+  {
+    "parent": "CONFIG->SYSLOG_FACILITY",
+    "original": "LOG_DAEMON"
+  },
+  {
+    "parent": "!shctx||shctx==MAP_FAILED",
+    "original": "!shctx"
+  },
+  {
+    "parent": "!shctx",
+    "original": "!shctx||shctx==MAP_FAILED"
+  },
+  {
+    "parent": "sizeofbuf",
+    "original": "149"
+  },
+  {
+    "parent": "(void)rb;returnRING_SLOTS;",
+    "original": "returnRING_SLOTS;"
+  },
+  {
+    "parent": "returnRING_SLOTS;",
+    "original": "(void)rb;returnRING_SLOTS;"
+  },
+  {
+    "parent": "!ptr&&n!=0",
+    "original": "!ptr"
+  }
+]
